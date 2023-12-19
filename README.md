@@ -11,7 +11,7 @@ TBD
 ## Build Guide
 
 *   Monkeypad(4x6):
-    [日本語/Japanese](./build_guide/standard/01_ビルドガイド.md)
+    [日本語/Japanese](./build_guide/standard/Japanese/01_ビルドガイド.md)
 
     English version is being prepared.
 
