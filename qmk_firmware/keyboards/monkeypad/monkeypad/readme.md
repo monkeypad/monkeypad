@@ -100,4 +100,4 @@ Opening soon (*Note: Hardware not yet available; stay tuned for updates*)
 
 Monkeypad offers a range of customizable features to tailor your keyboard experience. Explore the following options to personalize your keyboard to suit your preferences.
 
-See the readme.md for further information of [source code](./qmk_firmware/keyboards/monkeypad/4x6/readme.md). 
+See the readme.md for further information of [source code](4x6/readme.md). 
