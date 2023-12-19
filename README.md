@@ -45,5 +45,3 @@ For the following combinations, flash different firmware for each of the left an
 |9|Trackball|Analog Joystick|[9_mp_mk1_left_trackball_right_joystick_LEFT_via.uf2](./firmware/9_mp_mk1_left_trackball_right_joystick_LEFT_via.uf2)|[9_mp_mk1_left_trackball_right_joystick_RIGHT_via.uf2](./firmware/9_mp_mk1_left_trackball_right_joystick_RIGHT_via.uf2)|
 
 (TO BE DOCUMENTED)
-- [unit_test.uf2
-](https://github.com/Taro-Hayashi/KillerWhale/releases/latest/download/tarohayashi_killerwhale_solo_default.uf2)
