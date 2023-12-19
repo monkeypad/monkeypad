@@ -1,7 +1,6 @@
 # Monkeypad QMK Firmware
 
-![Monkeypad](link_to_monkeypad_image)
-Need to be updated
+![Monkeypad](https://github.com/monkeypad/monkeypad/blob/main/build_guide/standard/images/01/monkeypad_1_00.jpeg)
 
 ## Introduction
 
