@@ -98,12 +98,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #        define ENCODERS_PAD_B { GP26 }
 // right encoder
 #    elif defined MODULE_DEVICE_RIGHT_encoder
-#        if defined(ENCODERS_PAD_A) || defined(ENCODERS_PAD_B) // it has left encoder
+#        if defined(ENCODERS_PAD_A) || defined(ENCODERS_PAD_B) // if it has left encoder
 #           define ENCODERS_PAD_A_RIGHT { GP27 }
 #           define ENCODERS_PAD_B_RIGHT { GP26 }
-#        else // right encoder
+#        else // only right encoder
 #           define ENCODERS_PAD_A       { GP27 }
 #           define ENCODERS_PAD_B       { GP26 }
 #        endif
+#    else 
+// dummy encoder pins configuration for REMAP
+#        define ENCODERS_PAD_A { GP2 }
+#        define ENCODERS_PAD_B { GP3 }
 #    endif
 #endif

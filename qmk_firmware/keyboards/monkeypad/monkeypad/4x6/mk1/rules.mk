@@ -37,6 +37,7 @@ QUANTUM_LIB_SRC += i2c_master.c
 ALLOW_WARNINGS = yes
 PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
 
+# set to yes for for REMAP
 ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 

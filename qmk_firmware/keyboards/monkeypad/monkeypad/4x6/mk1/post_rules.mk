@@ -8,7 +8,7 @@ else
 	ifeq ($(or $(findstring encoder,$(MODULE_DEVICE_LEFT)), $(findstring encoder,$(MODULE_DEVICE_RIGHT))),encoder)
 		ENCODER_ENABLE = yes
 	else
-		ENCODER_ENABLE = no
+# 		ENCODER_ENABLE = no
 	endif
 	OPT_DEFS += -DMODULE_DEVICE_LEFT_$(strip $(MODULE_DEVICE_LEFT))
 	OPT_DEFS += -DMODULE_DEVICE_RIGHT_$(strip $(MODULE_DEVICE_RIGHT))

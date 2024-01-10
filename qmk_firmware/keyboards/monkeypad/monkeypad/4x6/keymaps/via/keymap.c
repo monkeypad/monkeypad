@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 /* Encoder Setting Get keycodes from the last row */
-#if defined(ENCODER_MAP_ENABLE)
+// #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_BASE]  = { ENCODER_CCW_CW(KC_WH_D, KC_WH_U),  ENCODER_CCW_CW(KC_WH_D, KC_WH_U)  },
     [_LOWER] = { ENCODER_CCW_CW(KC_DOWN, KC_UP),    ENCODER_CCW_CW(KC_DOWN, KC_UP)  },
@@ -113,7 +113,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_FUNC]  = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [_GAME]  = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX),  ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
 };
-#endif
+// #endif
 
 const rgblight_segment_t PROGMEM        base_layer[]    = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_TURQUOISE});
 const rgblight_segment_t PROGMEM        lower_layer[]   = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_BLUE});
