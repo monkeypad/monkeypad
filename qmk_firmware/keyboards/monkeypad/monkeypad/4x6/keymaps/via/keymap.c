@@ -26,7 +26,6 @@ enum monkeypad_keymap_layers {
 
 #define SCROLL_DIVISOR_H 100.0
 #define SCROLL_DIVISOR_V 100.0
-
 /* redefine keycode */
 #define KC_L_SPC    LT(_LOWER, KC_SPC)
 #define KC_L_BS     LT(_LOWER, KC_BSPC)
@@ -46,14 +45,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │     _BASE/_L0       │                                  ╭╮╭╮╭╮╭╮                       ╭╮╭╮╭╮╭╮╭╮                      ╭╮╭╮╭╮╭╮
    └─────────────────────┘                                  │╰╯╰╯╰╯│                       │╰╯╰╯╰╯╰╯│                      │╰╯╰╯╰╯│
    ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐┌─────────────────────────────┐ ┌─────────────────────────────┐┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
-   │   ESC   │    W    │    W    │    E    │    R    │    T    ││                             │ │                             ││    Y    │    W    │    U    │    I    │    O    │   BSPC  │
+   │   ESC   │    Q    │    W    │    E    │    R    │    T    ││                             │ │                             ││    Y    │    W    │    U    │    I    │    O    │   BSPC  │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤│                             │ │                             │├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
    │   TAB   │    A    │    S    │    D    │    F    │    G    ││    Left hand main board     │ │   Right hand main board     ││    H    │    J    │    K    │    L    │    ;    │    '    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤│                             │ │                             │├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
    │  SHIFT  │    Z    │    X    │    C    │    V    │    B    ││      Left hand module       │ │      Right hand module      ││    N    │    M    │    ,    │    .    │    /    │    ;    │
-   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭─────────┬─────────┬─────────╮ ╭─────────┬─────────┬─────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   _L4   │  CTRL   │   GUI   │ ALT/EN  │ _L2/ENT │ _L1/SPC ││ KC_WH_D │ KC_BTN3 │ KC_WH_U │ │ KC_WH_D │ KC_BTN3 │ KC_WH_U ││ _L1/SPC │ _L2/ENT │ ALT/JA  │   GUI   │  CTRL   │   _L3   │
-   └─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘╰─────────┴─────────┴─────────┘ ╰─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
+   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭─────────╮                   │ │                   ╭─────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+   │   _L4   │  CTRL   │   GUI   │ ALT/EN  │ _L2/ENT │ _L1/SPC ││ KC_BTN3 │                   │ │                   │ KC_WH_U ││ _L1/SPC │ _L2/ENT │ ALT/JA  │   GUI   │  CTRL   │   _L3   │
+   └─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘╰─────────┘                   │ │                   ╰─────────┘└─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
                      Left hand sub board keys                   │    Left hand main keys      / \      Right hand main keys   │                 Right hand sub board keys
                                                                 │   ╭─────────┬─────────╮    /   \    ╭─────────┬─────────╮   │
                                                                 │   │   ESC   │   TAB   │   /     \   │   ESC   │   TAB   │   │
@@ -69,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                                  Left hand main keys         Right hand main keys
                                                     KC_BTN1,    KC_BTN2,        KC_BTN1,    KC_BTN2,
 //                                                  Left hand module            Right hand module
-                                        KC_WH_D,    KC_BTN3,    KC_WH_U,        KC_WH_D,    KC_BTN3,    KC_WH_U
+                                                                KC_BTN3,        KC_BTN3
   ),
   [_LOWER] = LAYOUT_module(
     KC_DEL,     KC_HOME,    KC_UP,      KC_PGUP,    KC_LBRC,    KC_RBRC,        _______,    KC_7,       KC_8,       KC_9,       KC_PPLS,    KC_MINS,
@@ -77,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,    KC_END,     KC_BTN3,    KC_PGDN,    KC_LPRN,    KC_RPRN,        _______,    KC_1,       KC_2,       KC_3,       KC_SLSH,    KC_PEQL,
     _______,    _______,    _______,    _______,    _______,    _______,        _______,    _______,    KC_0,       KC_DOT,     _______,    _______,
                                                     _______,    _______,        _______,    _______,
-                                        KC_DOWN,    _______,    KC_UP,          KC_DOWN,    _______,    KC_UP
+                                                                _______,        _______
   ),
   [_RAISE] = LAYOUT_module(
     KC_GRV,     _______,    KC_WH_U,    _______,    _______,    _______,        _______,    KC_AMPR,    KC_ASTR,    KC_LPRN,    _______,    KC_UNDS,
@@ -85,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,    KC_UNDO,    KC_CUT,     KC_COPY,    KC_PSTE,    _______,        _______,    KC_EXLM,    KC_AT,      KC_HASH,    KC_QUES,    KC_BSLS,
     _______,    _______,    _______,    _______,    _______,    _______,        _______,    _______,    KC_RPRN,    KC_LABK,    KC_RABK,    KC_PIPE,
                                                     _______,    _______,        _______,    _______,
-                                        KC_LEFT,    _______,    KC_RGHT,        KC_LEFT,    _______,    KC_RGHT
+                                                                _______,        _______
   ),
   [_FUNC] = LAYOUT_module(
     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,          KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12,
@@ -93,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_BRID,    KC_MPLY,    KC_VOLD,    XXXXXXX,    DPI_DN,     XXXXXXX,        RGB_RMOD,   RGB_HUD,    RGB_SAD,    RGB_VAD,    RGB_SPD,    XXXXXXX,
     XXXXXXX,    KC_MPRV,    KC_MUTE,    XXXXXXX,    DPI_RST,    XXXXXXX,        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_TRNS,
                                                     KC_BTN1,    KC_BTN2,        KC_BTN1,    KC_BTN2,
-                                        KC_VOLD,    KC_MUTE,    KC_VOLU,        KC_VOLD,    KC_MUTE,    KC_VOLU
+                                                                KC_MUTE,        KC_MUTE
   ),
   [_GAME] = LAYOUT_module(
     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
@@ -101,33 +100,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
     KC_TRNS,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
                                                     KC_BTN1,    KC_BTN2,        KC_BTN1,    KC_BTN2,
-                                        XXXXXXX,    KC_SPC,     XXXXXXX,        XXXXXXX,    KC_SPC,     XXXXXXX
+                                                                KC_SPC,         KC_SPC
   ),
 };
 
-/* Encoder Setting */
-#ifdef ENCODER_ENABLE
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    keypos_t key;
-    if (index == 0) { // left encoder
-        wait_us(10);
-        if (clockwise) {
-            key.row = 5, key.col = 5;
-        } else {
-            key.row = 5, key.col = 4;
-        }
-        tap_code(keymap_key_to_keycode(layer_switch_get_layer(key), key));
-    } else if (index == 1) { // right encoder
-        wait_us(10);
-        if (clockwise) {
-            key.row = 11, key.col = 5;
-        } else {
-            key.row = 11, key.col = 4;
-        }
-        tap_code(keymap_key_to_keycode(layer_switch_get_layer(key), key));
-    }
-    return false;
-}
+/* Encoder Setting Get keycodes from the last row */
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [_BASE]  = { ENCODER_CCW_CW(KC_WH_D, KC_WH_U),  ENCODER_CCW_CW(KC_WH_D, KC_WH_U)  },
+    [_LOWER] = { ENCODER_CCW_CW(KC_DOWN, KC_UP),    ENCODER_CCW_CW(KC_DOWN, KC_UP)  },
+    [_RAISE] = { ENCODER_CCW_CW(KC_LEFT, KC_RGHT),  ENCODER_CCW_CW(KC_LEFT, KC_RGHT)  },
+    [_FUNC]  = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_GAME]  = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX),  ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+};
 #endif
 
 const rgblight_segment_t PROGMEM        base_layer[]    = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_TURQUOISE});
@@ -164,7 +149,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             break;
     }
 
-    // rgblight_set_layer_state(0, layer_state_cmp(state, _BASE));
+    rgblight_set_layer_state(0, layer_state_cmp(state, _BASE));
     rgblight_set_layer_state(1, layer_state_cmp(state, _LOWER));
     rgblight_set_layer_state(2, layer_state_cmp(state, _RAISE));
     rgblight_set_layer_state(3, layer_state_cmp(state, _FUNC));
@@ -172,3 +157,4 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     return state;
 }
+

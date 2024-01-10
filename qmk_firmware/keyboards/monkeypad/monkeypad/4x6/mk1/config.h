@@ -58,7 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 /* Trackball */
-#if defined(USE_DEVICE_pmw3360)
+#if defined(USE_DEVICE_pmw3389)
 #    define SPI_DRIVER SPID1
 #    define SPI_SCK_PIN GP26
 #    define SPI_MISO_PIN GP8

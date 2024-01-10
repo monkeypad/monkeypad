@@ -16,15 +16,15 @@ It has 4 PCB boards and 2 modules, a main and sub board for each of the left and
 **Important:** Ensure you specify the modules in `rules.mk` before compiling the firmware when swapping modules for different applications or uses.
 
 ```c
-MODULE_DEVICE_LEFT = {analog_joystick / pmw3360 / encoder}
-MODULE_DEVICE_RIGHT = {analog_joystick / pmw3360 / encoder}
+MODULE_DEVICE_LEFT = {analog_joystick / pmw3389 / encoder}
+MODULE_DEVICE_RIGHT = {analog_joystick / pmw3389 / encoder}
 ```
-QMK (version: 0.23.0) currently does not support multiple different pointing device sensor types. If using different pointing devices for left and right (analog_joystick / pmw3360), you need separate firmware for each side, requiring you to compile twice. When using encoders, the firmware remains the same for left and right.
+QMK (version: 0.23.0) currently does not support multiple different pointing device sensor types. If using different pointing devices for left and right (analog_joystick / pmw3389), you need separate firmware for each side, requiring you to compile twice. When using encoders, the firmware remains the same for left and right.
 
 Please select the TARGET_POINTING_DEVICE
 
 ```c
-TARGET_POINTING_DEVICE = {analog_joystick / pmw3360}
+TARGET_POINTING_DEVICE = {analog_joystick / pmw3389}
 ```
 The command is:
 

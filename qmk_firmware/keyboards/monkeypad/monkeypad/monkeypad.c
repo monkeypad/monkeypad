@@ -39,8 +39,9 @@ static monkeypad_config_t monkeypad_config = {0};
 
 #ifndef DPI_OPTIONS
 #    define DPI_OPTIONS \
-        { 200, 400, 600, 800, 1200, 1600, 2400, 3200, 4000 }
-#    define DPI_DEFAULT 3
+        { 100, 200, 300, 400, 500, 600, 800, 1000, 1500, 2000 } //pmw3389
+        // { 200, 400, 600, 800, 1000, 1600, 2000, 3000, 4000 } //pmw3360
+#    define DPI_DEFAULT 4
 #endif
 
 uint16_t dpi_array[] = DPI_OPTIONS;
@@ -106,10 +107,10 @@ void pointing_device_driver_set_cpi(uint16_t cpi) {}
 void pointing_device_set_split_cpi(uint16_t cpi) {
 // Redundant description because "pointing_device_set_cpi_on_side()" in pointing_device.c does not work properly when it has a pointing device on the right side
 #if defined(SPLIT_POINTING_ENABLE)
-#    if defined(MODULE_DEVICE_LEFT_pmw3360) && defined(MODULE_DEVICE_RIGHT_pmw3360)
+#    if defined(MODULE_DEVICE_LEFT_pmw3389) && defined(MODULE_DEVICE_RIGHT_pmw3389)
     pointing_device_set_cpi(cpi);
     pointing_device_set_cpi_on_side(true, cpi);
-#    elif defined(MODULE_DEVICE_LEFT_pmw3360)
+#    elif defined(MODULE_DEVICE_LEFT_pmw3389)
     if (is_keyboard_left()) { // if left
         pointing_device_set_cpi(cpi);
     } else {
@@ -119,7 +120,7 @@ void pointing_device_set_split_cpi(uint16_t cpi) {
         pointing_device_set_cpi(cpi);
 #endif
     }
-#    elif defined(MODULE_DEVICE_RIGHT_pmw3360)
+#    elif defined(MODULE_DEVICE_RIGHT_pmw3389)
     if (!is_keyboard_left()) { // if right
         pointing_device_set_cpi(cpi);
     } else {
@@ -167,13 +168,13 @@ report_mouse_t convert_mouse_to_scroll(report_mouse_t mouse_report) {
 
 #    if defined(POINTING_DEVICE_COMBINED)
 report_mouse_t pointing_device_task_combined_kb(report_mouse_t left_report, report_mouse_t right_report) {
-#        if defined(MODULE_DEVICE_LEFT_pmw3360) || defined(MODULE_DEVICE_RIGHT_pmw3360)
+#        if defined(MODULE_DEVICE_LEFT_pmw3389) || defined(MODULE_DEVICE_RIGHT_pmw3389)
     // Check if drag scrolling is active
     if (monkeypad_get_trackball_mode() == BALL_SCROLL_MODE) {
-#            if defined(MODULE_DEVICE_LEFT_pmw3360)
+#            if defined(MODULE_DEVICE_LEFT_pmw3389)
         left_report = convert_mouse_to_scroll(left_report);
 #            endif
-#            if defined(MODULE_DEVICE_RIGHT_pmw3360)
+#            if defined(MODULE_DEVICE_RIGHT_pmw3389)
         right_report = convert_mouse_to_scroll(right_report);
 #            endif
     }
@@ -184,7 +185,7 @@ report_mouse_t pointing_device_task_combined_kb(report_mouse_t left_report, repo
 
 #    elif defined(POINTING_DEVICE_LEFT) || defined(POINTING_DEVICE_RIGHT)
 report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
-#        if defined(MODULE_DEVICE_LEFT_pmw3360) || defined(MODULE_DEVICE_RIGHT_pmw3360)
+#        if defined(MODULE_DEVICE_LEFT_pmw3389) || defined(MODULE_DEVICE_RIGHT_pmw3389)
     if (monkeypad_get_trackball_mode() == BALL_SCROLL_MODE) {
         mouse_report = convert_mouse_to_scroll(mouse_report);
     }
@@ -231,18 +232,21 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 monkeypad_config.dpi_config = (monkeypad_config.dpi_config + 1) < DPI_OPTION_SIZE ? (monkeypad_config.dpi_config + 1) : (DPI_OPTION_SIZE - 1);
                 pointing_device_set_split_cpi(dpi_array[monkeypad_config.dpi_config]);
+                printf("DPI:%d\n",dpi_array[monkeypad_config.dpi_config]);
             }
             break;
         case DPI_DN:
             if (record->event.pressed) {
                 monkeypad_config.dpi_config = (monkeypad_config.dpi_config - 1) < 0 ? 0 : (monkeypad_config.dpi_config - 1);
                 pointing_device_set_split_cpi(dpi_array[monkeypad_config.dpi_config]);
+                printf("DPI:%d\n",dpi_array[monkeypad_config.dpi_config]);
             }
             break;
         case DPI_RST:
             if (record->event.pressed) {
                 monkeypad_config.dpi_config = DPI_DEFAULT;
                 pointing_device_set_split_cpi(dpi_array[monkeypad_config.dpi_config]);
+                printf("DPI:%d\n",dpi_array[monkeypad_config.dpi_config]);
             }
             break;
         case DPI_FINE:

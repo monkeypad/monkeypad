@@ -91,7 +91,7 @@ Opening soon (*Note: Hardware not yet available; stay tuned for updates*)
 * Available
     * Monkeypad
 * Modules
-    * Trackball (PMW3360)
+    * Trackball (PMW3389)
     * Analog joystick
     * Encoder
     * ... under development
