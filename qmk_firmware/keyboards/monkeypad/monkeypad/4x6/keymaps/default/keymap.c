@@ -130,6 +130,10 @@ void  keyboard_post_init_user(void) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     // If` joystick change mode is used, USB need to be connected to a joystick side.
+        case _BASE:
+            monkeypad_set_joystick_mode(JOYSTICK_MOUSE_MODE);
+            monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
+            break;
         case _LOWER:
             monkeypad_set_joystick_mode(JOYSTICK_WHEEL_MODE);
             monkeypad_set_trackball_mode(BALL_SCROLL_MODE);
@@ -139,7 +143,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
             break;
         case _GAME:
-            monkeypad_set_joystick_mode(JOYSTICK_GAMEPAD_MODE);
+            monkeypad_set_joystick_mode(JOYSTICK_GAME_MODE);
             monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
             break;
         default: //  for any other layers, or the default layer

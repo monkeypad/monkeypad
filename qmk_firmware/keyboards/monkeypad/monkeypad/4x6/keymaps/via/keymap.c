@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 /* Encoder Setting Get keycodes from the last row */
-// #if defined(ENCODER_MAP_ENABLE)
+#if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_BASE]  = { ENCODER_CCW_CW(KC_WH_D, KC_WH_U),  ENCODER_CCW_CW(KC_WH_D, KC_WH_U)  },
     [_LOWER] = { ENCODER_CCW_CW(KC_DOWN, KC_UP),    ENCODER_CCW_CW(KC_DOWN, KC_UP)  },
@@ -113,7 +113,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_FUNC]  = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [_GAME]  = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX),  ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
 };
-// #endif
+#endif
 
 const rgblight_segment_t PROGMEM        base_layer[]    = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_TURQUOISE});
 const rgblight_segment_t PROGMEM        lower_layer[]   = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_BLUE});
@@ -130,8 +130,13 @@ void  keyboard_post_init_user(void) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     // If` joystick change mode is used, USB need to be connected to a joystick side.
+        case _BASE:
+            monkeypad_set_joystick_mode(JOYSTICK_MOUSE_MODE);
+            monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
+            break;
         case _LOWER:
-            monkeypad_set_joystick_mode(JOYSTICK_WHEEL_MODE);
+            // monkeypad_set_joystick_mode(JOYSTICK_WHEEL_MODE);
+            monkeypad_set_joystick_mode(JOYSTICK_CUSTOM_MODE);
             monkeypad_set_trackball_mode(BALL_SCROLL_MODE);
             break;
         case _RAISE:
@@ -139,7 +144,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
             break;
         case _GAME:
-            monkeypad_set_joystick_mode(JOYSTICK_GAMEPAD_MODE);
+            monkeypad_set_joystick_mode(JOYSTICK_GAME_MODE);
             monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
             break;
         default: //  for any other layers, or the default layer

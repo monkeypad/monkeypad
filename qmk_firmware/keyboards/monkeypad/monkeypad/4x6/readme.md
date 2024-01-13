@@ -62,7 +62,8 @@ The default settings allow for the following:
 | JOYSTICK_MOUSE_MODE | Functions as a mouse, mode controlling the mouse cursor. |
 | JOYSTICK_WHEEL_MODE | Sends Wheel Up (KC_WH_U), Down (KC_WH_D), Left (KC_WH_L), and Right (KC_WH_R) key codes of the wheel. |
 | JOYSTICK_ARROW_MODE | Sends Up (KC_UP), Down (KC_DOWN), Left (KC_LEFT), and Right (KC_RIGHT) key codes. |
-| JOYSTICK_GAMEPAD_MODE | Sends the W (KC_W), A (KC_A), S (KC_S), and D (KC_D) key codes used in games. |
+| JOYSTICK_GAME_MODE | Sends the W (KC_W), A (KC_A), S (KC_S), and D (KC_D) key codes used in games. |
+| JOYSTICK_CUSTOM_MODE | Sends the user defined keycodes in analog_joystick.c. |
 
 To invert the scrolling direction when using JOYSTICK_WHEEL_MODE, define `JOYSTICK_WHEEL_REVERSE` in `config.h`
 

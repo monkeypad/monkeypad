@@ -24,7 +24,8 @@ typedef enum {
     JOYSTICK_MOUSE_MODE   = 0,
     JOYSTICK_WHEEL_MODE   = 1,
     JOYSTICK_ARROW_MODE   = 2,
-    JOYSTICK_GAMEPAD_MODE = 3
+    JOYSTICK_GAME_MODE    = 3,
+    JOYSTICK_CUSTOM_MODE  = 4
 } monkeypad_joystick_mode;
 
 typedef enum {
@@ -51,10 +52,15 @@ enum monkeypad_keycodes {
     MK_WHEEL,
     MK_ARROW,
     MK_PAD,
+    MK_CUSTOM,
     DPI_UP,
     DPI_DN,
     DPI_RST,
-    DPI_FINE
+    DPI_FINE,
+    JOY_UP,
+    JOY_DOWN,
+    JOY_LEFT,
+    JOY_RIGHT
 };
 
 extern monkeypad_config_t keyboard_config;

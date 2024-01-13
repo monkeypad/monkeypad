@@ -2,8 +2,8 @@
 # Select module type
 # Module type := analog_joystick / pmw3389 / encoder
 # pmw3389 = trackball sensor
-MODULE_DEVICE_LEFT = pmw3389
-MODULE_DEVICE_RIGHT = analog_joystick
+MODULE_DEVICE_LEFT = analog_joystick
+MODULE_DEVICE_RIGHT = encoder
 
 # If you are using different pointing devices (analog_joystick / pmw3389) on the left and right,
 # you must select the target pointing device and compile twice, once for each side.

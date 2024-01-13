@@ -222,7 +222,14 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             break;
         case MK_PAD:
             if (record->event.pressed) {
-                monkeypad_set_joystick_mode(JOYSTICK_GAMEPAD_MODE);
+                monkeypad_set_joystick_mode(JOYSTICK_GAME_MODE);
+            } else {
+                monkeypad_set_joystick_mode(JOYSTICK_MOUSE_MODE);
+            }
+            break;
+        case MK_CUSTOM:
+            if (record->event.pressed) {
+                monkeypad_set_joystick_mode(JOYSTICK_CUSTOM_MODE);
             } else {
                 monkeypad_set_joystick_mode(JOYSTICK_MOUSE_MODE);
             }

@@ -45,12 +45,10 @@ Monkeypad's QMK firmware can be configured to meet your specific needs. Refer to
 
 2. Compile the firmware
 
-| Version | default                                                         | via                                                         |
-| -------------- | --------------------------------------------------------------- | ----------------------------------------------------------- |
-| Mk1            | `qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km default` | `qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km via` |
-
 ```bash
-qmk compile -kb monkeypad/monkeypad/mk1 -km default
+qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km default
+or
+qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km via
 ```
 The firmware file follows this naming format:
 monkeypad_monkeypad_<model_name>_<keymap_name>.{bin,uf2}
