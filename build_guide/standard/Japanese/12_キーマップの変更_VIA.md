@@ -1,15 +1,15 @@
 ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)
 
-  - [12. カスタマイズ](11_全体の組み立て.md)
-    - [12-1. VIA](#12-1VIA用ファイル)
+  - [12. キーマップの変更(VIA)](12_キーマップの変更_VIA.md)
+    - [12-1. キーマップの変更(VIA)](#12-1VIA用ファイル)
     - [12-2. カスタムキーコード](#12-2カスタムキーコード)
-    - [12-3. ソースコード](#12-3ソースコード)
+    - [12-3. ソースからビルド](#12-3ソースコード)
 
 ### 12-1.VIA用ファイル
 
 キーマップを設定するために、VIAの設定ファイルをダウンロードします。
 
-[Download JSON file](https://github.com/monkeypad/monkeypad/releases/download/v0.1.0/monkeypad_via.json)
+[Download JSON file](https://github.com/monkeypad/monkeypad/releases/download/v0.1.0/Monkeypad_Mk1.json)
 
 VIAのサイトに移動します。
 [VIA](https://www.caniusevia.com/)
@@ -44,30 +44,30 @@ DPI値レンジ{ 200, 400, 600, 800, 1200, 1600, 2400, 3200, 4000 }. デフォ�
 
 ### 12-3.ソースコード
 
-QMKは、左右で異なるポインティングデバイスのドライバーをサポートしていません。
+QMKは、左右で異なるポインティングデバイスのドライバーをサポートしていません。（2024/01時点）
 
-もし左右で異なるポインティングデバイス(analog_joystick / pmw3389)を使用している場合、
+もし左右で異なるポインティングデバイス(analog_joystick / pmw3360)を使用している場合、
 ターゲットとなるポインティングデバイスを選択し、左右それぞれ1回ずつ、2回コンパイルする必要があります。
 （左右で同じポインティングデバイスを使用する場合、エンコーダを使用する場合はファイルは左右で同じファームウェアを使用します.）
 
 QMKでキーボードをコードからカスタムする場合、keyboards/monkeypad/monkeypad/4x6/mk1/rules.mkの
 以下のように使用するポインティングデバイスの組み合わせと書き込む側のポインティングデバイスの２つを設定してください。
 
-例：左がジョイスティックで右がトラックボール(pmw3389)の場合、以下のように指定します。
+例：左がジョイスティックで右がトラックボール(pmw3360)の場合、以下のように指定します。
 
-Please select Module type := analog_joystick / pmw3389 / encoder
+Please select Module type := analog_joystick / pmw3360 / encoder
 
-pmw3389 = trackball sensor
+pmw3360 = trackball sensor
 
 ```c
 MODULE_DEVICE_LEFT = analog_joystick
-MODULE_DEVICE_RIGHT = pmw3389
+MODULE_DEVICE_RIGHT = pmw3360
 ```
 
-例：書き込むボードがトラックボールのモジュールの場合、`TARGET_POINTING_DEVICE`にpmw3389を設定します。
+例：書き込むボードがトラックボールのモジュールの場合、`TARGET_POINTING_DEVICE`にpmw3360を設定します。
 
-Please select TARGET_POINTING_DEVICE Type (analog_joystick / pmw3389) ?
+Please select TARGET_POINTING_DEVICE Type (analog_joystick / pmw3360) ?
 
 ```c
-TARGET_POINTING_DEVICE = pmw3389
+TARGET_POINTING_DEVICE = pmw3360
 ```
