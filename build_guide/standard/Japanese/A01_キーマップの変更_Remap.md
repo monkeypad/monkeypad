@@ -43,7 +43,7 @@ Remapのトップページから[FIND A KEYBOARD]を選択し、検索画面よ�
 
 BUILDタブを選択し、[BUILD FIRMWARE]ボタンを押します。
 
-![](../images/A01/remap_04.jpg)
+![](../images/A01/remap_04.png)
 
 Build Parametersの画面が開きます。
 
@@ -57,7 +57,7 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 ファームウェアをビルドする前に `rules.mk` でモジュールを指定していることを確認してください。
 
-![](../images/A01/remap_05.jpg)
+![](../images/A01/remap_05.png)
 
 `keymap.c` でトラックボール、アナログジョイスティックのモードを変更することができます。
 
@@ -76,11 +76,11 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 さらに`config.h` でトラックボールのスクロールモード、アナログジョイスティックのホイールモードの向きを逆転させることができます。
 
-![](../images/A01/remap_06.jpg)
+![](../images/A01/remap_06.png)
 
 さらに`modules/analog_joystick.c` でアナログジョイスティックのカスタムモード時のキーコードを設定することができます。デフォルト設定は[1,2,3,4]としています。
 
-![](../images/A01/remap_07.jpg)
+![](../images/A01/remap_07.png)
 
 - QMK
 
