@@ -35,7 +35,7 @@ Monkeypadの最新ファームウェアはすべてGithubのリポジトリに�
 
 [Monkeypad(github)](https://github.com/monkeypad/monkeypad/tree/main/qmk_firmware/keyboards/monkeypad/monkeypad)
 
-- Remap
+（方法１）Remap
 
 Remapはキーマップの変更だけでなく、新機能としてファームウェアビルド機能が追加されました（2023/11）。ローカルにQMKの開発環境を構築することなく、ファームウェアをソースコードレベルからビルドすることもできます。詳しくは作者の[Yoichiroさんが解説されている記事](https://www.eisbahn.jp/yoichiro/2023/11/remap_building_firmware.html#gsc.tab=0)のユーザー向けの機能をご参照ください。
 
@@ -84,7 +84,7 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 変更箇所の設定を行い、BUILDボタンを押すと、ファームウェアがビルドされます。ダウンロードして書き込みして下さい。
 
-- QMK
+（方法２）QMK
 
 githubのmonkeypadフォルダをお手持ちのQMK_Firmware/keyboardsへコピーして自由にキーマップ等を編集してビルドしてください。詳しくはディレクトリ内にあるreadmeをお読み下さい。
 
