@@ -39,7 +39,50 @@ Monkeypadの最新ファームウェアはすべてGithubのリポジトリに�
 
 Remapはキーマップの変更だけでなく、新機能としてファームウェアビルド機能が追加されました（2023/11）。ローカルにQMKの開発環境を構築することなく、ファームウェアをソースコードレベルからビルドすることもできます。詳しくは作者の[Yoichiroさんが解説されている記事](https://www.eisbahn.jp/yoichiro/2023/11/remap_building_firmware.html#gsc.tab=0)のユーザー向けの機能をご参照ください。
 
+Remapのトップページから[FIND A KEYBOARD]を選択し、検索画面より[Monkeypad_Mk1]を検索して下さい。
+
+BUILDタブを選択し、[BUILD FIRMWARE]ボタンを押します。
+
+![](../images/A01/remap_04.jpg)
+
+Build Parametersの画面が開きます。
+
+**重要:** 
+
+Monkeypadは異なるアプリケーションや用途のために複数のモジュールを交換可能となっています。
+
+しかし、QMK (version: 0.23.0)は現在、複数の異なるポインティングデバイス・センサータイプを標準でサポートしていません。
+
+左右で異なるポインティングデバイス（analog_joystick / pmw3389）を使用する場合は、左右それぞれに別々のファームウェアが必要となり、ターゲットとなるポインティングデバイスを指定して2回ビルドする必要があります。エンコーダーを使用する場合や、左右同じ種類のポインティングデバイス（eg.左右両方トラックボール）を使用する場合はファームウェアは左右共通のファームウェアが使用可能です。
+
+ファームウェアをビルドする前に `rules.mk` でモジュールを指定していることを確認してください。
+
+![](../images/A01/remap_05.jpg)
+
+`keymap.c` でトラックボール、アナログジョイスティックのモードを変更することができます。
+
+| Trackball Mode | Description                                                 |
+| -------------- | ----------------------------------------------------------- |
+| BALL_MOUSE_MODE | マウスのようにカーソルを移動する. |
+| BALL_SCROLL_MODE | 画面をスクロールする。 |
+
+| Joystick Mode  | Description                                                 |
+| -------------- | ----------------------------------------------------------- |
+| JOYSTICK_MOUSE_MODE | マウスのようにカーソルを移動する. |
+| JOYSTICK_WHEEL_MODE | マウスホイールのキーコードを送る。Wheel Up (KC_WH_U), Down (KC_WH_D), Left (KC_WH_L), Right (KC_WH_R) |
+| JOYSTICK_ARROW_MODE | 上下左右矢印のキーコードを送る。 Up (KC_UP), Down (KC_DOWN), Left (KC_LEFT), and Right (KC_RIGHT) |
+| JOYSTICK_GAME_MODE | WASD（ゲームで移動に使われるキー）のキーコードを送る。 W (KC_W), A (KC_A), S (KC_S), and D (KC_D) |
+| JOYSTICK_CUSTOM_MODE | ユーザーが、analog_joystick.cで定義するキーコードを送る。|
+
+さらに`config.h` でトラックボールのスクロールモード、アナログジョイスティックのホイールモードの向きを逆転させることができます。
+
+![](../images/A01/remap_06.jpg)
+
+さらに`modules/analog_joystick.c` でアナログジョイスティックのカスタムモード時のキーコードを設定することができます。デフォルト設定は[1,2,3,4]としています。
+
+![](../images/A01/remap_07.jpg)
+
 - QMK
 
-monkeypadフォルダをお手持ちのQMK_Firmware/keyboardsへコピーして自由にキーマップ等を編集してビルドしてください。いろいろな方が解説されています。
+githubのmonkeypadフォルダをお手持ちのQMK_Firmware/keyboardsへコピーして自由にキーマップ等を編集してビルドしてください。詳しくはディレクトリ内にあるreadmeをお読み下さい。
 
