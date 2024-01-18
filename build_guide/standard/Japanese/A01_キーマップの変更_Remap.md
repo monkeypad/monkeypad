@@ -1,4 +1,4 @@
-### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)
+<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
   - [A01. キーマップの変更(Remap)](A01_キーマップの変更_Remap.md)
     - [A01-1. キーマップの変更(Remap)](#A01-1キーマップの変更)
@@ -61,6 +61,8 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 `keymap.c` でトラックボール、アナログジョイスティックのモードを変更することができます。
 
+![](../images/A01/remap_06.png)
+
 | Trackball Mode | Description                                                 |
 | -------------- | ----------------------------------------------------------- |
 | BALL_MOUSE_MODE | マウスのようにカーソルを移動する. |
@@ -76,9 +78,7 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 さらに`config.h` でトラックボールのスクロールモード、アナログジョイスティックのホイールモードの向きを逆転させることができます。
 
-![](../images/A01/remap_06.png)
-
-さらに`modules/analog_joystick.c` でアナログジョイスティックのカスタムモード時のキーコードを設定することができます。デフォルト設定は[1,2,3,4]としています。
+`modules/analog_joystick.c` でアナログジョイスティックのカスタムモード時のキーコードを設定することができます。デフォルト設定は[1,2,3,4]としています。
 
 ![](../images/A01/remap_07.png)
 
@@ -88,3 +88,31 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 githubのmonkeypadフォルダをお手持ちのQMK_Firmware/keyboardsへコピーして自由にキーマップ等を編集してビルドしてください。詳しくはディレクトリ内にあるreadmeをお読み下さい。
 
+
+QMKは、左右で異なるポインティングデバイスのドライバーをサポートしていません。（2024/01時点）
+
+もし左右で異なるポインティングデバイス(analog_joystick / pmw3389)を使用している場合、
+ターゲットとなるポインティングデバイスを選択し、左右それぞれ1回ずつ、2回コンパイルする必要があります。
+（左右で同じポインティングデバイスを使用する場合、エンコーダを使用する場合はファイルは左右で同じファームウェアを使用します.）
+
+QMKでキーボードをコードからカスタムする場合、keyboards/monkeypad/monkeypad/4x6/mk1/rules.mkの
+以下のように使用するポインティングデバイスの組み合わせと書き込む側のポインティングデバイスの２つを設定してください。
+
+例：左がジョイスティックで右がトラックボール(pmw3389)の場合、以下のように指定します。
+
+Please select Module type := analog_joystick / pmw3389 / encoder
+
+pmw3389 = trackball sensor
+
+```c
+MODULE_DEVICE_LEFT = analog_joystick
+MODULE_DEVICE_RIGHT = pmw3389
+```
+
+例：書き込むボードがトラックボールのモジュールの場合、`TARGET_POINTING_DEVICE`にpmw3389を設定します。
+
+Please select TARGET_POINTING_DEVICE Type (analog_joystick / pmw3389) ?
+
+```c
+TARGET_POINTING_DEVICE = pmw3389
+```
