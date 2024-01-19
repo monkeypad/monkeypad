@@ -86,16 +86,19 @@ Monkeypadは異なるアプリケーションや用途のために複数のモ�
 
 （方法２）QMK
 
-githubのmonkeypadフォルダをお手持ちのQMK_Firmware/keyboardsへコピーして自由にキーマップ等を編集してビルドしてください。詳しくはディレクトリ内にあるreadmeをお読み下さい。
+※上級者向け
 
+QMKのビルド環境をローカルに構築し、[Monkeypadのソースコード](https://github.com/monkeypad/monkeypad/tree/main/qmk_firmware/keyboards/monkeypad/monkeypad)からビルドすることもできます。
+
+githubのmonkeypadフォルダをお手持ちのQMK_Firmware/keyboardsへクローンして自由にキーマップ等を編集してビルドしてください。詳しくはディレクトリ内にあるreadmeをお読み下さい。
 
 QMKは、左右で異なるポインティングデバイスのドライバーをサポートしていません。（2024/01時点）
 
 もし左右で異なるポインティングデバイス(analog_joystick / pmw3389)を使用している場合、
 ターゲットとなるポインティングデバイスを選択し、左右それぞれ1回ずつ、2回コンパイルする必要があります。
-（左右で同じポインティングデバイスを使用する場合、エンコーダを使用する場合はファイルは左右で同じファームウェアを使用します.）
+（左右で同じポインティングデバイスを使用する場合やエンコーダを使用する場合はファイルは左右で同じファームウェアを使用します.）
 
-QMKでキーボードをコードからカスタムする場合、keyboards/monkeypad/monkeypad/4x6/mk1/rules.mkの
+QMKでキーボードをコードからカスタムする場合、keyboards/monkeypad/monkeypad/4x6/mk1/rules.mkで
 以下のように使用するポインティングデバイスの組み合わせと書き込む側のポインティングデバイスの２つを設定してください。
 
 例：左がジョイスティックで右がトラックボール(pmw3389)の場合、以下のように指定します。
@@ -109,7 +112,7 @@ MODULE_DEVICE_LEFT = analog_joystick
 MODULE_DEVICE_RIGHT = pmw3389
 ```
 
-例：書き込むボードがトラックボールのモジュールの場合、`TARGET_POINTING_DEVICE`にpmw3389を設定します。
+例：書き込むPicoがトラックボールのモジュールに接続される場合、`TARGET_POINTING_DEVICE`にpmw3389を設定します。
 
 Please select TARGET_POINTING_DEVICE Type (analog_joystick / pmw3389) ?
 
