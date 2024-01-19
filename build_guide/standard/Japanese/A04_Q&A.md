@@ -50,6 +50,7 @@ https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.htm
 - トラックボールの動きが遅い
   - PCにUSBで接続していない場合、仕様として遅くなることが確認されています。トラックボールは、速度を決定するDPIの値を即座にキーで変更することができます。
   　Layer(3)のFn Layerにカスタムキー{DPI_UP(速くする), DPI_DN(遅くする), DPI_RST(リセットする)}を押すことで、トラックボールの動きを変更できます。
+　　[Default Keymap](../images/keymap_cheatsheet_monkeypad.pdf)をご確認ください。
   　また、Remapの`monkeypad.c`のビルドパラメータを変更して、DPIのレンジ、デフォルト値を設定し、オリジナルのファームウェアを作成することもできます。
 
 - マウスカーソルが遅れる/カクつく
