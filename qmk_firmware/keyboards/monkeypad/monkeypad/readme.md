@@ -8,7 +8,7 @@ Monkeypad is a customizable mechanical keyboard designed for enthusiasts seeking
 
 ## Features
 
-- Interchangeable modules for trackball, joystick, and encoder
+- Interchangeable modules for trackball, joystick, encoder and trackpad
 - User-adjustable tenting structure
 - Stylish aluminum plate for a split keyboard design
 - Expansion ports for additional functionalities
@@ -92,6 +92,7 @@ Opening soon (*Note: Hardware not yet available; stay tuned for updates*)
     * Trackball (PMW3389)
     * Analog joystick
     * Encoder
+    * Trackpad (Cirque Pinnacle)
     * ... under development
 
 ## Customizing the Firmware

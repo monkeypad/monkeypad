@@ -17,12 +17,14 @@
 
 #include QMK_KEYBOARD_H
 
+
 #if defined(USE_DEVICE_analog_joystick)
 #    include "modules/analog_joystick.h"
 #endif
 
 monkeypad_status_t monkeypad_status = {
     .trackball_mode = BALL_MOUSE_MODE,
+    .trackpad_mode  = PAD_MOUSE_MODE,
     .joystick_mode  = JOYSTICK_MOUSE_MODE
 };
 
@@ -51,11 +53,22 @@ uint8_t monkeypad_get_trackball_mode(void) {
     return monkeypad_status.trackball_mode;
 }
 
+uint8_t monkeypad_get_trackpad_mode(void) {
+    return monkeypad_status.trackpad_mode;
+}
+
 void monkeypad_set_trackball_mode(uint8_t mode) {
     if (mode != monkeypad_status.trackball_mode) {
         monkeypad_status.trackball_mode_changed = timer_read32();
     }
     monkeypad_status.trackball_mode = mode;
+}
+
+void monkeypad_set_trackpad_mode(uint8_t mode) {
+    if (mode != monkeypad_status.trackpad_mode) {
+        monkeypad_status.trackpad_mode_changed = timer_read32();
+    }
+    monkeypad_status.trackpad_mode = mode;
 }
 
 uint8_t monkeypad_get_joystick_mode(void) {
@@ -69,31 +82,19 @@ void monkeypad_set_joystick_mode(uint8_t mode) {
     monkeypad_status.joystick_mode = mode;
 }
 
-void keyboard_post_init_kb(void) {
-#ifdef POINTING_DEVICE_ENABLE
-    monkeypad_config.dpi_config = DPI_DEFAULT;
-
-    pointing_device_set_cpi(dpi_array[monkeypad_config.dpi_config]);
-#endif
-    keyboard_post_init_user();
-}
-
 void pointing_device_driver_init(void) {
 #ifdef USE_DEVICE_analog_joystick
     analog_joystick_init();
 #endif
 }
 
-/* Analog joystick function */
 report_mouse_t pointing_device_driver_get_report(report_mouse_t mouse_report) {
+/* Analog joystick function */
 #ifdef USE_DEVICE_analog_joystick
     /* Align orientation with other pointing devices */
     mouse_report        = analog_joystick_get_report(mouse_report);
-    mouse_xy_report_t x = mouse_report.x;
-    mouse_xy_report_t y = mouse_report.y;
-    mouse_report.x      = -y;
-    mouse_report.y      = x;
 #endif
+
     return (mouse_report);
 }
 
@@ -135,8 +136,33 @@ void pointing_device_set_split_cpi(uint16_t cpi) {
     return;
 }
 
-/* Trackball function */
 #if defined(POINTING_DEVICE_ENABLE) && defined(SPLIT_POINTING_ENABLE)
+report_mouse_t pmw3389_orientation_adjust(report_mouse_t mouse_report) {
+    mouse_xy_report_t x = mouse_report.x;
+    mouse_xy_report_t y = mouse_report.y;
+    
+    mouse_report.x = - y;
+    mouse_report.y = - x;
+
+    return mouse_report;
+}
+
+report_mouse_t cirque_tracpad_orientation_djust(report_mouse_t mouse_report) {
+    mouse_xy_report_t x = mouse_report.x;
+    mouse_xy_report_t y = mouse_report.y;
+
+#    ifdef TRACKPAD_CURSOR_REVERSE
+    mouse_report.x = x;
+    mouse_report.y = y;
+#    else
+    mouse_report.x = - x;
+    mouse_report.y = - y;
+#    endif
+
+    return mouse_report;
+}
+
+/* Trackball function */
 // Variables to store accumulated scroll values
 float scroll_accumulated_h = 0;
 float scroll_accumulated_v = 0;
@@ -147,7 +173,7 @@ report_mouse_t convert_mouse_to_scroll(report_mouse_t mouse_report) {
     scroll_accumulated_v -= (float)mouse_report.y / SCROLL_DIVISOR_V;
 
     // Assign integer parts of accumulated scroll values to the mouse report
-#    ifdef TRACKBALL_SCROLL_REVERSE
+#    if defined(TRACKBALL_SCROLL_REVERSE) || defined(TRACKPAD_SCROLL_REVERSE)
     mouse_report.h = -(int8_t)scroll_accumulated_h;
     mouse_report.v = -(int8_t)scroll_accumulated_v;
 #    else
@@ -170,11 +196,34 @@ report_mouse_t convert_mouse_to_scroll(report_mouse_t mouse_report) {
 report_mouse_t pointing_device_task_combined_kb(report_mouse_t left_report, report_mouse_t right_report) {
 #        if defined(MODULE_DEVICE_LEFT_pmw3389) || defined(MODULE_DEVICE_RIGHT_pmw3389)
     // Check if drag scrolling is active
+#            if defined(MODULE_DEVICE_LEFT_pmw3389)
+    left_report  = pmw3389_orientation_adjust(left_report);
+#            endif
+#            if defined(MODULE_DEVICE_RIGHT_pmw3389)
+    right_report = pmw3389_orientation_adjust(right_report);
+#            endif
     if (monkeypad_get_trackball_mode() == BALL_SCROLL_MODE) {
 #            if defined(MODULE_DEVICE_LEFT_pmw3389)
         left_report = convert_mouse_to_scroll(left_report);
 #            endif
 #            if defined(MODULE_DEVICE_RIGHT_pmw3389)
+        right_report = convert_mouse_to_scroll(right_report);
+#            endif
+    }
+#        endif
+
+#        if defined(MODULE_DEVICE_LEFT_cirque_pinnacle_spi) || defined(MODULE_DEVICE_RIGHT_cirque_pinnacle_spi)
+#            if defined(MODULE_DEVICE_LEFT_cirque_pinnacle_spi)
+    left_report  = cirque_tracpad_orientation_djust(left_report);
+#            endif
+#            if defined(MODULE_DEVICE_RIGHT_cirque_pinnacle_spi)
+    right_report = cirque_tracpad_orientation_djust(right_report);
+#            endif
+    if (monkeypad_get_trackpad_mode() == PAD_SCROLL_MODE) {
+#            if defined(MODULE_DEVICE_LEFT_cirque_pinnacle_spi)
+        left_report = convert_mouse_to_scroll(left_report);
+#            endif
+#            if defined(MODULE_DEVICE_RIGHT_cirque_pinnacle_spi)
         right_report = convert_mouse_to_scroll(right_report);
 #            endif
     }
@@ -186,7 +235,17 @@ report_mouse_t pointing_device_task_combined_kb(report_mouse_t left_report, repo
 #    elif defined(POINTING_DEVICE_LEFT) || defined(POINTING_DEVICE_RIGHT)
 report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
 #        if defined(MODULE_DEVICE_LEFT_pmw3389) || defined(MODULE_DEVICE_RIGHT_pmw3389)
+    // Check if drag scrolling is active
+    mouse_report  = pmw3389_orientation_adjust(mouse_report);
     if (monkeypad_get_trackball_mode() == BALL_SCROLL_MODE) {
+        mouse_report = convert_mouse_to_scroll(mouse_report);
+    }
+#        endif
+
+#        if defined(MODULE_DEVICE_LEFT_cirque_pinnacle_spi) || defined(MODULE_DEVICE_RIGHT_cirque_pinnacle_spi)
+    // Check if drag scrolling is active
+    mouse_report  = cirque_tracpad_orientation_djust(mouse_report);
+    if (monkeypad_get_trackpad_mode() == PAD_SCROLL_MODE) {
         mouse_report = convert_mouse_to_scroll(mouse_report);
     }
 #        endif
@@ -196,6 +255,15 @@ report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
 #    endif
 #endif
 
+void keyboard_post_init_kb(void) {
+#ifdef POINTING_DEVICE_ENABLE
+    monkeypad_config.dpi_config = DPI_DEFAULT;
+    // pointing_device_set_cpi(dpi_array[monkeypad_config.dpi_config]);
+    pointing_device_set_split_cpi(dpi_array[monkeypad_config.dpi_config]);
+#endif
+    keyboard_post_init_user();
+}
+
 /* Custom keycodes */
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -204,6 +272,13 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 monkeypad_set_trackball_mode(BALL_SCROLL_MODE);
             } else {
                 monkeypad_set_trackball_mode(BALL_MOUSE_MODE);
+            }
+            break;
+        case MK_PAD:
+            if (record->event.pressed) {
+                monkeypad_set_trackpad_mode(PAD_SCROLL_MODE);
+            } else {
+                monkeypad_set_trackpad_mode(PAD_MOUSE_MODE);
             }
             break;
         case MK_WHEEL:
@@ -220,7 +295,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 monkeypad_set_joystick_mode(JOYSTICK_MOUSE_MODE);
             }
             break;
-        case MK_PAD:
+        case MK_GAME:
             if (record->event.pressed) {
                 monkeypad_set_joystick_mode(JOYSTICK_GAME_MODE);
             } else {

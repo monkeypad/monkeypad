@@ -372,7 +372,7 @@ void analog_joystick_init(void) {
 report_mouse_t analog_joystick_get_report(report_mouse_t mouse_report) {
     report_analog_joystick_t data = analog_joystick_read();
 
-    mouse_report.x = data.x;
+    mouse_report.x = - data.x;
     mouse_report.y = data.y;
 
     mouse_report.buttons = pointing_device_handle_buttons(mouse_report.buttons, data.button, POINTING_DEVICE_BUTTON1);

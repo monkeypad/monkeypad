@@ -1,20 +1,20 @@
 # Monkeypad build options
 # Select module type
-# Module type := analog_joystick / pmw3389 / encoder
+# Module type := analog_joystick / pmw3389 / cirque_pinnacle_spi / encoder
 # pmw3389 = trackball sensor
-MODULE_DEVICE_LEFT = analog_joystick
-MODULE_DEVICE_RIGHT = encoder
+MODULE_DEVICE_LEFT = pmw3389
+MODULE_DEVICE_RIGHT = cirque_pinnacle_spi
 
 # If you are using different pointing devices (analog_joystick / pmw3389) on the left and right,
 # you must select the target pointing device and compile twice, once for each side.
 # If you use an encoder, the files will be the same for left and right.
 
-# Please select the TARGET_POINTING_DEVICE. If both are encoders, this is ignored.
-# Type (analog_joystick / pmw3389) ?
-TARGET_POINTING_DEVICE = analog_joystick
+# Please select the Pointing device type on this board. If both are encoders, this is ignored.
+# Type (analog_joystick / pmw3389 / cirque_pinnacle_spi) ?
+TARGET_POINTING_DEVICE = cirque_pinnacle_spi
 
 # ***********************************************************************************
-# QMK build options
+# QMK build optionst
 #   change yes to no to disable
 SPLIT_KEYBOARD = yes
 SERIAL_DRIVER = usart
@@ -41,11 +41,13 @@ PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
 ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 
+MIDI_ENABLE = no
+
 # ***********************************************************************************
 # Compiler options (The following do not need to be changed)
 # This definition can not be moved to "post_rules.mk"
 # Check whether the pointing device is on MODULE_DEVICE_LEFT or MODULE_DEVICE_RIGHT
-POINTING_MODULE_NAME := analog_joystick pmw3389
+POINTING_MODULE_NAME := analog_joystick pmw3389 cirque_pinnacle_spi
 ifneq (,$(filter $(POINTING_MODULE_NAME),$(MODULE_DEVICE_LEFT) $(MODULE_DEVICE_RIGHT)))
 #	if it has at least one pointing device
 	ifeq ($(strip $(TARGET_POINTING_DEVICE)), encoder)
@@ -53,6 +55,8 @@ ifneq (,$(filter $(POINTING_MODULE_NAME),$(MODULE_DEVICE_LEFT) $(MODULE_DEVICE_R
 			TARGET_POINTING_DEVICE = pmw3389
 		else ifeq ($(or $(findstring analog_joystick,$(MODULE_DEVICE_LEFT)), $(findstring analog_joystick,$(MODULE_DEVICE_RIGHT))),analog_joystick)
 			TARGET_POINTING_DEVICE = analog_joystick
+		else ifeq ($(or $(findstring cirque_pinnacle_spi,$(MODULE_DEVICE_LEFT)), $(findstring cirque_pinnacle_spi,$(MODULE_DEVICE_RIGHT))),cirque_pinnacle_spi)
+			TARGET_POINTING_DEVICE = cirque_pinnacle_spi
 		endif
 	endif
 
@@ -63,6 +67,8 @@ ifneq (,$(filter $(POINTING_MODULE_NAME),$(MODULE_DEVICE_LEFT) $(MODULE_DEVICE_R
 	ifeq ($(strip $(TARGET_POINTING_DEVICE)), pmw3389)
 		POINTING_DEVICE_DRIVER = pmw3389
 		MOUSE_SHARED_EP = no
+    else ifeq ($(strip $(TARGET_POINTING_DEVICE)), cirque_pinnacle_spi)
+		POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
 	else ifeq ($(strip $(TARGET_POINTING_DEVICE)), analog_joystick)
 #		Custom code modules/analog_joystick.c
 		POINTING_DEVICE_DRIVER = custom

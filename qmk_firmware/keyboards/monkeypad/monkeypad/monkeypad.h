@@ -33,9 +33,16 @@ typedef enum {
     BALL_SCROLL_MODE = 1
 } monkeypad_trackball_mode;
 
+typedef enum {
+    PAD_MOUSE_MODE  = 0,
+    PAD_SCROLL_MODE = 1
+} monkeypad_trackpad_mode;
+
 typedef struct {
     uint8_t trackball_mode;
     uint8_t trackball_mode_changed;
+    uint8_t trackpad_mode;
+    uint8_t trackpad_mode_changed;
     uint8_t joystick_mode;
     uint8_t joystick_mode_changed;
 } monkeypad_status_t;
@@ -52,6 +59,7 @@ enum monkeypad_keycodes {
     MK_WHEEL,
     MK_ARROW,
     MK_PAD,
+    MK_GAME,
     MK_CUSTOM,
     DPI_UP,
     DPI_DN,
@@ -67,5 +75,7 @@ extern monkeypad_config_t keyboard_config;
 extern uint16_t          dpi_array[];
 uint8_t monkeypad_get_trackball_mode(void);
 void    monkeypad_set_trackball_mode(uint8_t mode);
+uint8_t monkeypad_get_trackpad_mode(void);
+void    monkeypad_set_trackpad_mode(uint8_t mode);
 uint8_t monkeypad_get_joystick_mode(void);
 void    monkeypad_set_joystick_mode(uint8_t mode);
