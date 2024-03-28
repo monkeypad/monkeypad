@@ -1,8 +1,8 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-  - [B. アジャスタブルリンクの組み立て](B02_アジャスタブルリンク.md)
-    - [B-1. 使用する部品](./B02_アジャスタブルリンク.md/#B-1使用する部品)
-    - [B-2. アジャスタブルリンクの組み立て](./B02_アジャスタブルリンク.md/#B-2アジャスタブルリンクの組み立て)  
+  - [B. アジャスタブルリンクの組み立て](B02_adujstable_link.md)
+    - [B-1. 使用する部品](./B02_adujstable_link.md/#B-1使用する部品)
+    - [B-2. アジャスタブルリンクの組み立て](./B02_adujstable_link.md/#B-2アジャスタブルリンクの組み立て)  
 
 ![](../images/B02/monkeypad_b02_00_front.jpg)
 
