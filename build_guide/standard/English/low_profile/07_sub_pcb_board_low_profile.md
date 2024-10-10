@@ -1,90 +1,90 @@
-### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)）
-
-  - [7. サブボードの組み立て（左/右）](07_サブボード.md)
-    - [7-1. 使用する部品](./07_サブボード.md/#7-1使用する部品)
-    - [7-2. サブボードの部品のはんだ付け](./07_サブボード.md/#7-2サブボードの部品のはんだ付け)
-    - [7-3. ロープロファイルキースイッチを標準キットに追加する場合](./07_サブボード.md/#7-3ロープロファイルキースイッチを標準キットに追加する場合)
+- [7. Assembling the Sub-Board (Left/Right)](07_sub_pcb_board_low_profile.md)
+  - [7-1. Parts Used](./07_sub_pcb_board_low_profile.md/#7-1Components)
+  - [7-2. Soldering Sub-Board Components](./07_sub_pcb_board_low_profile.md/#7-2Soldering-Sub-Board-Components)
+  - [7-3. Adding Low-Profile Key Switches to the Standard Kit](./07_sub_pcb_board_low_profile.md/#7-3Adding-Low-Profile-Key-Switches-to-the-Standard-Kit)
 
 
-## こちらのページは、オプションのロープロファイルキーソケットを取り付けた場合です。
+## This Page is for When You Have Attached Optional Low-Profile Key Sockets
 
-### 7-1．使用する部品
+### 7-1.Components
 
-片側１枚あたり以下の部品を使用します。左右対称ですので反対側も同様です。
+The following parts are used per side. Since they are symmetrical for left and right, assemble the opposite side in the same manner.
 
-| No | 名前 | 数 |
-|:-|:-|:-|
-|  2 | サブPCB基板(左/右) | 1枚 |
-|  8 | サブトッププレート(左/右) | 1枚 |
-|  9 | サブボトムプレート(左/右) | 1枚 |
-| 11 | サブボディ(左/右) | 1個 |
-| 23 | IOエキスパンダ(MCP23017) | 2個 | |
-| 26 | TRRSジャック | 1個 |
-| 31 | Groveコネクタ | 1個 |
-| 33 | ダイオード(SMD) | 24個 |
-| 49 | Kailh キースイッチソケット(ロープロファイル) | 24個 |
-
-
-### 7-2.サブボードの部品のはんだ付け
-
-部品の実装は全て部品名がシルク印刷されてある裏面になります。
-[33]ダイオードを片側に24個取り付けます。向きに注意してください。四角のスルーホール側がカソード側（線が印字されている方）です。
-
-![](../../images/07/monkeypad_7_02.jpeg)
-
-次にキースイッチは別売りのロープロファイル[49]Kailh PCBソケット choc用を写真のように片側24個取り付けていきます。標準のMX用キーソケットと両方取り付けても問題はありません。
-
-![](../../images/07/monkeypad_7_32.jpeg)
-
-[23]IOエキスパンダをはんだ付けします。ICの切り欠きの方向をシルク印刷に合わせて取り付けてください。
-
-![](../../images/07/monkeypad_7_12.jpeg)
+| No | Name | Quantity |
+|:-:|:---|:---:|
+| 2 | Sub PCB Board (Left/Right) | 1 pc |
+| 8 | Sub Top Plate (Left/Right) | 1 pc |
+| 9 | Sub Bottom Plate (Left/Right) | 1 pc |
+| 11 | Sub Body (Left/Right) | 1 pc |
+| 23 | IO Expander (MCP23017) | 2 pcs |
+| 26 | TRRS Jack | 1 pc |
+| 31 | Grove Connector | 1 pc |
+| 33 | Diode (SMD) | 24 pcs |
+| 49 | Kailh Key Switch Socket (Low-Profile) | 24 pcs |
 
 
-少しピンが開いていて入れづらいので、手や机で軽く押してスルーホールに合わせてください。
+### 7-2.Soldering Sub-Board Components
 
-![](../../images/07/monkeypad_7_03.jpeg)
+All component installations are done on the underside where the component names are silk-screened.
 
-はんだ付けをする前に全ての足がスルーホールから出ているか確認してください。
+Solder the [33] Diodes, 24 per side. Pay attention to the orientation. The square through-hole side is the cathode side (marked with lines).
 
-![](../../images/07/monkeypad_7_04.jpeg)
+![Soldering Diodes](../../images/07/monkeypad_7_02.jpeg)
 
-[26]TRRSジャックをマスキングテープなどで固定すると作業しやすくなります。
+Next, install the low-profile [49] Kailh PCB Socket choc for the key switches as shown in the photo, 24 per side. It is also fine to install both standard MX key sockets and low-profile sockets.
 
-![](../../images/07/monkeypad_7_05.jpeg)
+![Installing Key Sockets](../../images/07/monkeypad_7_32.jpeg)
 
-I2Cの拡張コネクタである[31]GROVEコネクタを取り付けます。同じ2mmピッチの4ピンのスルーホールが近くにありますので間違えないように注意してください。
+Solder the [23] IO Expanders. Install them aligning the notch direction with the silk screen.
 
-GROVE I2Cと印刷されているパッドに上向きに取り付けます。
-
-![](../../images/07/monkeypad_7_06.jpeg)
-
-はんだ付けした後、はみ出しているIOエキスパンダ、TRRSジャック、GROVEコネクタの足をニッパーで切ります。
-
-![](../../images/07/monkeypad_7_07.jpeg)
-
-![](../../images/07/monkeypad_7_08.jpeg)
-
-![](../../images/07/monkeypad_7_09.jpeg)
-
-I2C Addressのソルダージャンパーをはんだを流し込んでショートさせます。これは、IOエキスパンダのI2Cアドレスを指定するものです。A0, A1, A2をすべてLowにショートさせます。
-
-パッドをこて先で温めてから、はんだを溶かすとブリッジできます。
-![](../../images/07/monkeypad_7_10.jpeg)
-
-※ I2Cアドレスを変更したい場合は反対側の面にHighがあります。Lowと表面のHighの両方を同時にショートさせて、電源に接続しないでください。故障する可能性があります。変更する場合はソースコード、ファームウェアもあわせて変更する必要があります。
-
-サブボードの完成です。
-
-![](../../images/07/monkeypad_7_34.jpeg)
-
-反対側も同様に実装します。
+![Soldering IO Expander](../../images/07/monkeypad_7_12.jpeg)
 
 
-### 7-3.ロープロファイルキースイッチを標準キットに追加する場合
+The pins are slightly spread apart and difficult to insert, so gently press with your hand or on the table to align them with the through-holes.
 
-すでに標準キットを組み立て済みで、ロープロファイル仕様に変更したい場合は、別売りのロープロファイル[49]Kailh PCBソケット choc用を写真のように片側24個追加してください。キースイッチが両方ついても問題ありません。
+![Aligning Pins](../../images/07/monkeypad_7_03.jpeg)
 
-![](../../images/07/monkeypad_7_35.jpeg)
+Before soldering, ensure all pins are sticking out from the through-holes.
 
-  - [次へ(08_メインボードの実装)](08_メインボード.md)
+![Checking Pins](../../images/07/monkeypad_7_04.jpeg)
+
+Fix the [26] TRRS Jack with masking tape or similar to make the work easier.
+
+![Fixing TRRS Jack](../../images/07/monkeypad_7_05.jpeg)
+
+Install the [31] GROVE Connector, which is an I2C expansion connector. Be careful not to insert into the nearby 4-pin 2mm pitch through-holes by mistake.
+
+Install the GROVE Connector on the pad labeled "GROVE I2C" with the top facing up.
+
+![Installing Grove Connector](../../images/07/monkeypad_7_06.jpeg)
+
+After soldering, trim the protruding pins of the IO Expander, TRRS Jack, and GROVE Connector with wire cutters.
+
+![Trimming Pins](../../images/07/monkeypad_7_07.jpeg)
+
+![Trimming Pins](../../images/07/monkeypad_7_08.jpeg)
+
+![Trimming Pins](../../images/07/monkeypad_7_09.jpeg)
+
+Solder the I2C Address solder jumper by pouring solder to short them. This specifies the I2C address of the IO Expander. Short A0, A1, and A2 all to Low.
+
+Heat the pads with the soldering iron tip and melt the solder to bridge them.
+
+![Soldering I2C Address](../../images/07/monkeypad_7_10.jpeg)
+
+**Note:** If you want to change the I2C address, there is a High on the opposite side. Do not short Low and High simultaneously, and do not connect to power, as it may cause damage. If you change it, you also need to modify the source code and firmware accordingly.
+
+The sub-board is now complete.
+
+![Completed Sub-Board](../../images/07/monkeypad_7_34.jpeg)
+
+Assemble the opposite side in the same manner.
+
+
+### 7-3.Adding Low-Profile Key Switches to the Standard Kit
+
+If you have already assembled the standard kit and wish to change it to low-profile specifications, add the separately sold low-profile [49] Kailh PCB Socket choc as shown in the photo, 24 per side. It is also fine to have both standard and low-profile key sockets installed.
+
+![Adding Low-Profile Sockets](../../images/07/monkeypad_7_35.jpeg)
+
+- [Next (08_Main Board Assembly)](../08_main_pcb_board.md)

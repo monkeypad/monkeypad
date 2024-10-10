@@ -1,14 +1,14 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
 - [B. Assembling the Adjustable Link](B02_Adjustable_Link.md)
-  - [B-1. Parts Used](./B02_Adjustable_Link.md/#b-1Components)
-  - [B-2. Assembling the Adjustable Link](./B02_Adjustable_Link.md/#b-2Assembling-the-Adjustable-Link)  
+  - [B-1. Parts Used](./B02_Adjustable_Link.md/#B-1Components)
+  - [B-2. Assembling the Adjustable Link](./B02_Adjustable_Link.md/#B-2Assembling-the-Adjustable-Link)  
 
 ![Front View](../images/B02/monkeypad_b02_00_front.jpg)
 
 ![Back View](../images/B02/monkeypad_b02_00_back.jpg)
 
-### B-1. Components
+### B-1.Components
 
 This section covers assembling the optional adjustable link.
 
@@ -23,7 +23,7 @@ This section covers assembling the optional adjustable link.
 
 ![Parts Used](../images/B02/monkeypad_b02_01.jpg)
 
-### B-2. Assembling the Adjustable Link
+### B-2.Assembling the Adjustable Link
 
 Remove the two M3 screws from the torque hinges as shown in the figure. Be careful not to lose the removed screws and nuts as they will be reused.
 

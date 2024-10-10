@@ -4,7 +4,7 @@
   - [10-3. Assembling the Sub-Board](./10_assembly.md/#10-3Assembling-the-Sub-Board)
   - [10-4. Attaching the Rubber Pads](./10_assembly.md/#10-4Attaching-the-Rubber-Pads)
 
-### 10-1. Assembly of the Main Board
+### 10-1.Assembly of the Main Board
 
 ![Main Board Assembly](../images/10/monkeypad_10_01.jpeg)
 
@@ -42,7 +42,7 @@ The torque hinges are adjustable in hardness. Adjust the tightness of the hex nu
 
 ![Adjusting Torque Hinges](../images/10/monkeypad_10_08.jpeg)
 
-### 10-2. Attaching the Tripod Adapter
+### 10-2.Attaching the Tripod Adapter
 
 ![](../images/10/monkeypad_10_10.jpeg)
 
@@ -58,7 +58,7 @@ Secure the [46] Tripod Adapters to the sub-board's bottom plate using [40] M3 x 
 
 ![Grommet Attached](../images/10/monkeypad_10_13.jpeg)
 
-### 10-3. Assembling the Sub-Board
+### 10-3.Assembling the Sub-Board
 
 #### [If attaching low-profile sockets to the sub-board, click here](../low_profile/10_Assembly_Low_Profile.md)
 

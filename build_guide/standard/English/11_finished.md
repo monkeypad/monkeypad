@@ -2,7 +2,7 @@
   - [11-1. Writing the Firmware](./11_finished.md/#11-1Writing-the-Firmware)
   - [11-2. Testing](./11_finished.md/#11-2Testing)
 
-### 11-1. Writing the Firmware
+### 11-1.Writing the Firmware
 
 Choose and install the left and right modules in any combination you prefer.
 
@@ -46,7 +46,7 @@ If the pointing devices on the left and right are different, flash different fir
 |15|Trackpad|Trackball|[15_mp_mk1_left_trackpad_right_trackball_LEFT_via.uf2](https://github.com/monkeypad/monkeypad/releases/download/v0.2.0/15_mp_mk1_left_trackpad_right_trackball_LEFT_via.uf2)|[15_mp_mk1_left_trackpad_right_trackball_RIGHT_via.uf2](https://github.com/monkeypad/monkeypad/releases/download/v0.2.0/15_mp_mk1_left_trackpad_right_trackball_RIGHT_via.uf2)|
 |16|Trackball|Trackpad|[16_mp_mk1_left_trackball_right_trackpad_LEFT_via.uf2](https://github.com/monkeypad/monkeypad/releases/download/v0.2.0/16_mp_mk1_left_trackball_right_trackpad_LEFT_via.uf2)|[16_mp_mk1_left_trackball_right_trackpad_RIGHT_via.uf2](https://github.com/monkeypad/monkeypad/releases/download/v0.2.0/16_mp_mk1_left_trackball_right_trackpad_RIGHT_via.uf2)|
 
-### 11-2. Testing
+### 11-2.Testing
 
 **Good job!** If some features do not work as expected, let's troubleshoot by referring to the Q&A section.
 

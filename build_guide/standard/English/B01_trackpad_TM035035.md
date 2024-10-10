@@ -1,11 +1,11 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
 - [B. Assembling the Trackpad Module](B01_trackpad_TM035035.md)
-  - [B-1. Components](./B01_trackpad_TM035035.md/#b-1Components)
-  - [B-2. Soldering PMW3389 Components](./B01_trackpad_TM035035.md/#b-2Soldering-PMW3389-Components)
-  - [B-3. Assembling the Trackpad Module](./B01_trackpad_TM035035.md/#b-3Assembling-the-Trackpad-Module)  
+  - [B-1. Components](./B01_trackpad_TM035035.md/#B-1Components)
+  - [B-2. Soldering PMW3389 Components](./B01_trackpad_TM035035.md/#B-2Soldering-PMW3389-Components)
+  - [B-3. Assembling the Trackpad Module](./B01_trackpad_TM035035.md/#B-3Assembling-the-Trackpad-Module)  
 
-### B-1. Components
+### B-1.Components
 
 This section covers assembling the optional trackpad module.
 We use the Cirque-manufactured trackpad module (TM035035-2024-003). To connect the SPI communication (12-pin) to the Monkeypad module, connect via a conversion board.
@@ -25,7 +25,7 @@ We use the Cirque-manufactured trackpad module (TM035035-2024-003). To connect t
 
 ![Image3](../images/B01/monkeypad_b01_02.jpg)
 
-### B-2. Soldering PMW3389 Components
+### B-2.Soldering PMW3389 Components
 
 For soldering the trackpad components, solder the [28] 8-Pin L-Shaped Pin Header.
 
@@ -38,7 +38,7 @@ Fix the [28] 8-Pin L-Shaped Pin Header on the "BOTTOM" side and solder the backs
 
 ![Image5](../images/B01/monkeypad_b01_04.jpg)  
 
-### B-3. Assembling the Trackpad Module
+### B-3.Assembling the Trackpad Module
 
 Raise the clips on the [74] connector part and connect the FFC/FPC flat cable so that the blue side is on top and the pins are at the bottom.
 

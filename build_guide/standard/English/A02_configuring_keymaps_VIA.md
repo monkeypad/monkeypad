@@ -1,9 +1,8 @@
 - [A02. Changing the Keymap (VIA)](A02_Changing_Keymap_VIA.md)
-  - [A02-1. Changing the Keymap (VIA)](#a02-1-VIA-Configuration-File)
-  - [A02-2. Custom Keycodes](#a02-2Custom-Keycodes)
-  - [A02-3. Building from Source](#a02-3Building-from-Source)
+  - [A02-1. Changing the Keymap (VIA)](#A02-1VIA-Configuration-File)
+  - [A02-2. Custom Keycodes](#A02-2Custom-Keycodes)
 
-### A02-1. VIA Configuration File
+### A02-1.VIA Configuration File
 
 To set up the keymap, download the VIA configuration file below.
 
@@ -20,7 +19,7 @@ In the Design tab, click the `Load Draft Definition` button and load the downloa
 
 Return to the Configure tab, and your keyboard will be recognized, allowing you to use VIA.
 
-### A02-2. Custom Keycodes
+### A02-2.Custom Keycodes
 
 Change the modes of the trackball and joystick.
 
@@ -40,9 +39,3 @@ DPI value range: {100, 200, 300, 400, 500, 600, 800, 1000, 1500, 2000}. The defa
 | DPI_DN     | Decreases the DPI                                              | 
 | DPI_RST    | Resets the DPI to the default value (default: 500)             | 
 | DPI_FINE   | Sets the DPI to the minimum (100) while the key is pressed     | 
-
-### A02-3. Building from Source
-
-See document for firmware source code.
-
-[Download Source Code](https://github.com/monkeypad/monkeypad/tree/main/qmk_firmware/keyboards/monkeypad/monkeypad)

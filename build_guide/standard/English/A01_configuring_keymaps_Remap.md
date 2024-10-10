@@ -1,8 +1,9 @@
 - [A01. Changing the Keymap (Remap)](A01_Changing_Keymap_Remap.md)
   - [A01-1. Changing the Keymap (Remap)](#A01-1Changing-the-Keymap-(Remap))
   - [A01-2. For Deeper Customization](#A01-2For-Deeper-Customization)
+  - [A01-3. Building from Source](#A01-3Building-from-Source)
 
-### A01-1. Changing the Keymap (Remap)
+### A01-1.Changing the Keymap (Remap)
 
 You can download the default keymap from the link below.
 
@@ -24,7 +25,7 @@ After arranging the keymap to your preferred layout, press the flash button to a
 
 ![Applying Keymap](../images/A01/remap_03.jpg)
 
-### A01-2. For Deeper Customization
+### A01-2.For Deeper Customization
 
 **If you want to build the firmware yourself**
 

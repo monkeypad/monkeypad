@@ -1,117 +1,92 @@
+- [10. Assembly](10_Assembly.md)
+  - [10-1. Assembling the Main Board](#10-1Assembling-the-Main-Board)
+  - [10-2. Attaching the Tripod Adapter](#10-2Attaching-the-Tripod-Adapter)
+  - [10-3. Assembling the Sub-Board](#10-3Assembling-the-Sub-Board)
+  - [10-4. Attaching the Rubber Pads](#10-4Attaching-the-Rubber-Pads)
 
-### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)）
+### 10-1.Assembling the Main Board
 
-  - [10.組み立て](10_組み立て.md)
-    - [10-1. メインボードの組み立て](#10-1メインボードの組み立て)
-    - [10-2. 三脚アダプタの取り付け](#10-2三脚アダプタの取り付け)
-    - [10-3. サブボードの組み立て](#10-3サブボードの組み立て)
-    - [10-4. ゴムパッドの貼り付け](#10-4ゴムパッドの貼り付け)
+![Front View](../../images/10/monkeypad_10_01.jpeg)
 
-### 10-1.メインボードの組み立て
+Since the design is fully symmetrical and reversible, decide whether to have the aluminum side of the top plate facing out or the white & logo side facing out.
+*Note:* The aluminum side has no surface coating, so it can be easily scratched. If needed, apply a protective coating. Spare parts for replacement are also available.
 
-![](../../images/10/monkeypad_10_01.jpeg)
+![Back View](../../images/10/monkeypad_10_02.jpeg)
 
-完全な左右対称でリバーシブルですのでトッププレートのアルミ面を面にするか、白&ロゴの面を表にするか決めてください。
-※ アルミ面は表面塗装などを行なっていません。傷つきやすいので必要な場合は塗装してください。交換用に保守部品なども用意しています。
+The photos show an example of assembling with the white side facing out.
 
-![](../../images/10/monkeypad_10_02.jpeg)
+Fix the [22] torque hinges to the main body. Insert the [41] M3 hex nuts into the opposite nut pockets and temporarily secure with [38] M3 low-profile screws 12mm.
 
-写真は白い面を表にする例で組み立てていきます。
+![Fixing Torque Hinges](../../images/10/monkeypad_10_03.jpeg)
 
-[22]トルクヒンジをメインボディに固定します。[41]M３の六角ナットを反対側のナットポケットに挿入し、[38]M3低頭ネジ12mmで仮止めします。
+![Fixing Torque Hinges](../../images/10/monkeypad_10_04.jpeg)
 
-![](../../images/10/monkeypad_10_03.jpeg)
+Insert five [36] hex double male screws into the pockets as shown in the photo. Attach the [6] main top plate with [37] M3 low-profile screws 6mm.
 
-![](../../images/10/monkeypad_10_04.jpeg)
+Attach to the side with the ribs as shown in the photo. Secure the top plate and main PCB by sandwiching the ribs.
 
+![Attaching Top Plate](../../images/10/monkeypad_10_05.jpeg)
 
-写真のようにポケットに[36]六角両メネジを５個挿入していきます。[6]メイントッププレートを[37]M3低頭ネジ6mmで取り付けます。
+Secure the main PCB with [39] M2 screws 10mm and nuts.
 
-写真のようにリブがある側に取り付けます。トッププレートとメイン基板がリブを挟み込むよう固定します。
+![Securing Main PCB](../../images/10/monkeypad_10_06.jpeg)
 
-![](../../images/10/monkeypad_10_05.jpeg)
+Attach the [7] main bottom plate with [37] M3 low-profile screws 6mm.
 
-メイン基板を[39]M2ネジ10mmとナットで固定します。
+![Attaching Bottom Plate](../../images/10/monkeypad_10_07.jpeg)
 
-![](../../images/10/monkeypad_10_06.jpeg)
+Torque hinges are adjustable hinges. Adjust the tightness with a wrench to change the stiffness.
 
-[7]メインボトムプレートを(37)M3低頭ネジ6mmで固定します。
+![Adjusting Torque Hinges](../../images/10/monkeypad_10_08.jpeg)
 
-![](../../images/10/monkeypad_10_07.jpeg)
+![Adjusting Torque Hinges](../../images/10/monkeypad_10_08.jpeg)
 
-トルクヒンジは硬さが調整可能なヒンジです。六角ナットの締め具合で硬さが変わりますのでスパナで調整してください。
+### 10-2.Attaching the Tripod Adapter
 
-![](../../images/10/monkeypad_10_08.jpeg)
+![Attaching Tripod Adapter](../../images/10/monkeypad_10_10.jpeg)
 
-![](../../images/10/monkeypad_10_08.jpeg)
+Attach the [46] tripod adapter to the sub-board's bottom plate using [37] M3 low-profile screws 6mm and [41] M3 nuts.
+Alternatively, you can attach [45] grommets instead of the tripod adapter. Use whichever you prefer.
 
-### 10-2.三脚アダプタの取り付け
+When attaching the tripod adapter:
 
-![](../../images/10/monkeypad_10_10.jpeg)
+![Tripod Adapter Attached](../../images/10/monkeypad_10_11.jpeg)
 
-サブボードのボトムプレートにM3低頭ネジ6mmと[41]M3ナットで[46]三脚アダプタを取り付けます。
-三脚アダプタの代わりに、[45]グロメットを取り付けることも可能です。お好きな方をお使いください。
+![Tripod Adapter Attached](../../images/10/monkeypad_10_12.jpeg)
 
-三脚アダプタを取り付けた場合
+When attaching the grommet:
 
-![](../../images/10/monkeypad_10_11.jpeg)
+![Attaching Grommet](../../images/10/monkeypad_10_13.jpeg)
 
-![](../../images/10/monkeypad_10_12.jpeg)
+### 10-3.Assembling the Sub-Board
 
-グロメットを取り付けた場合
+### If You Have Installed Standard Key Sockets, Refer Here ([../standard/10_Assembly_Low_Profile.md](../standard/10_Assembly_Low_Profile.md))
 
-![](../../images/10/monkeypad_10_13.jpeg)
+Fix the [8] sub top plate and sub PCB board. Insert [43] spacers for low-profile between them and secure with [39] M2 screws 10mm and [42] M2 nuts.
 
-### 10-3.サブボードの組み立て
+Ensure that the IO Expanders, TRRS Jacks, and Grove Connectors' pins on the PCB board do not touch the top plate by trimming any excess cable length with wire cutters. (Contact may change resistor values and cause malfunctions.)
 
-### 通常のキーソケットを取り付けた場合はこちら(../standard/10_組み立て_ロープロ.md)）
+![Soldering Components](../../images/10/monkeypad_10_30.jpeg)
 
-[8]サブトッププレートとサブPCB基板を固定します。[43]間にロープロファイル用スペーサーを挟んで[39]ネジM2x10mm、[42]M2ナットで固定します。
+Fix the [11] sub body and [9] sub bottom plate. Insert five [36] hex double male screws into the sub body's pockets and secure the top plate with [37] M3 low-profile screws 6mm.
+Attach to the side with the ribs as shown in the photo.
 
-このときPCB基板上のIOエキスパンダ、ジャック、コネクタの足はトッププレートに接触しないように余分な長さはカットしてあることを確認してください。（接触して抵抗値が変わることにより不具合の原因になる場合があります。）
+![Assembling Sub-Body](../../images/10/monkeypad_10_31.jpeg)
 
-![](../../images/10/monkeypad_10_30.jpeg)
+Fix the [11] sub body, [8] sub top plate, and sub PCB board. Secure the top plate with [37] M3 low-profile screws 6mm.
 
-[11]サブボディと[9]サブボトムプレートを固定します。サブボディのポケットに六角両メネジを５個挿入し、[37]M3低頭ネジ6mmでまずトッププレートを固定します。
-写真のように取り付ける面はリブがついている面に取り付けます。
+![Securing Top Plate and PCB](../../images/10/monkeypad_10_32.jpeg)
 
-![](../../images/10/monkeypad_10_31.jpeg)
+Finally, secure the torque hinges. Insert [41] M3 hex nuts into the bottom of the nut pocket and tighten with [38] M3 low-profile screws 12mm.
 
-[11]サブボディと[8]サブトッププレートとサブPCB基板を固定します。M3低頭ネジ6mmでトッププレートを固定します。
+![Securing Torque Hinges](../../images/10/monkeypad_10_33.jpeg)
 
-![](../../images/10/monkeypad_10_32.jpeg)
+Adjust the torque hinge's position and stiffness to prevent collisions when moving it 90 degrees as shown in the photo.
 
-最後にトルクヒンジを固定します。ナットポケットの下側にM3ナットを入れ、上から[38]M3低頭ネジ12mmで止めます。
+Assemble the opposite side in the same manner.
 
-![](../../images/10/monkeypad_10_33.jpeg)
+### 10-4.Attaching the Rubber Pads
 
-写真のように90度動かしてもぶつからないようにトルクヒンジの位置や硬さを調整してください。
+Attach [44] rubber cushion pads to the following locations to complete the assembly.
 
-反対側も同様に組み立てます。
-
-
-### 10-4.ゴムパッドの貼り付け
-
-[44]クッションゴムを以下の位置に貼り付ければ組み立ては完成です。
-
-![](../../images/10/monkeypad_10_19.jpeg)
-
-お好みのキースイッチとキーキャップを取り付けてください。
-お疲れ様でした！
-
-![](../../images/10/monkeypad_10_34.jpeg)
-
-  - [次へ(11_ファームウェア)](11_ファームウェア.md)
-
-
-### 10-2.三脚アダプタの取り付け
-
-サブボードのボトムプレートにM3低頭ネジ6mmと[41]M3ナットで[46]三脚アダプタを取り付けます。
-三脚アダプタの代わりに、[45]グロメットを取り付けることも可能です。お好きな方をお使いください。
-
-[44]クッションゴムを以下の位置に貼り付ければ組み立ては完成です。
-お好みのキースイッチとキーキャップを取り付けてください。
-お疲れ様でした！
-
-  - [次へ](11_ファームウェアの書き込み.md)
-
+![Attaching Rubber Pads](../../images/10/mon
