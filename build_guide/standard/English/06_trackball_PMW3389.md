@@ -31,6 +31,7 @@ Important Please pay attention to the orientation (up and down) as shown in the 
 Please pay attention to the orientation (up and down) as shown in the photo.
 
 ![](../images/06/monkeypad_6_02.jpeg)  
+![](../images/06/monkeypad_6_02_2.jpeg)  
 
 Solder on the side labeled "LENS".
 

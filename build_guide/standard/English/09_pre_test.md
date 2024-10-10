@@ -20,8 +20,7 @@ It will be recognized by your PC as a USB drive named RPI-RP2.
 
 Alternatively, you can achieve the same by holding down the BOOTSEL button on the Pico while connecting it to the PC via a USB cable.
 
-![Pico DFU Mode](../images/09/monkeypad_9_02_ja.jpeg)
-<!-- ![](../images/09/monkeypad_9_02_en.jpeg) -->
+![Pico DFU Mode](../images/09/monkeypad_9_02_en.jpeg)
 
 Drag and drop the downloaded file onto the drive. Once the drive automatically disappears, the flashing process is successful.
 

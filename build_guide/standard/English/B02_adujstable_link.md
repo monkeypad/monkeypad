@@ -1,8 +1,8 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-- [B. Assembling the Adjustable Link](B02_Adjustable_Link.md)
-  - [B-1. Parts Used](./B02_Adjustable_Link.md/#B-1Components)
-  - [B-2. Assembling the Adjustable Link](./B02_Adjustable_Link.md/#B-2Assembling-the-Adjustable-Link)  
+- [B. Assembling the Adjustable Link](B02_adujstable_link.md)
+  - [B-1. Parts Used](./B02_adujstable_link.md/#B-1Components)
+  - [B-2. Assembling the Adjustable Link](./B02_adujstable_link.md/#B-2Assembling-the-Adjustable-Link)  
 
 ![Front View](../images/B02/monkeypad_b02_00_front.jpg)
 

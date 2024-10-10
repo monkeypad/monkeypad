@@ -88,7 +88,7 @@ Adjust the position and hardness of the torque hinges to ensure they do not coll
 
 Assemble the other side in the same way.
 
-### 10-4. Attaching the Rubber Pads
+### 10-4.Attaching the Rubber Pads
 
 Attach the [44] Rubber Pads at the following positions to complete the assembly.
 

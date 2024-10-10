@@ -57,8 +57,7 @@ Attach the L-shaped 8-pin socket. This is the part that connects to the modules 
 
 Adjust and mount it so that it is level.
 
-![](../images/08/monkeypad_8_08_ja.jpeg)
-<!-- ![](../images/08/monkeypad_8_08_en.jpeg) -->
+![](../images/08/monkeypad_8_08_en.jpeg)
 
 Temporarily assemble the main body by sandwiching the [6] Main Top Plate and the [10][1] Main PCB Board, and try sliding one of the modules. If there are no issues with height and angle, it should slide as shown in the image.
 
