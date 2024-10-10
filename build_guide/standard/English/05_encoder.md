@@ -1,9 +1,9 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-  - [5. Assembling the Encoder](05_rotary_encoder.md)
-    - [5-1. Components](./05_rotary_encoder.md/#5-1Components)
-    - [5-2. Soldering the Encoder Components](./05_rotary_encoder.md/#5-2Soldering the Encoder Components)
-    - [5-3. Assembling the Encoder Module](./05_rotary_encoder.md/#5-3Assembling the Encoder Module)
+- [5. Assembling the Encoder](05_encoder.md)
+  - [5-1. Parts Used](./05_encoder.md/#5-1-parts-used)
+  - [5-2. Soldering Encoder Components](./05_encoder.md/#5-2-soldering-encoder-components)
+  - [5-3. Assembling the Encoder Module](./05_encoder.md/#5-3-assembling-the-encoder-module)
 
 ### 5-1.Components
 

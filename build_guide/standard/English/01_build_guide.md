@@ -1,54 +1,54 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-Standard Specifications
+### Standard Specifications
 
-! [](... /images/01/monkeypad_1_00.jpeg)
+![Standard Monkeypad](../images/01/monkeypad_1_00.jpeg)
 
-Low-profile specifications (can be modified by adding components after assembly of the standard specifications)
+### Low-Profile Specifications (Can be changed by adding parts after assembling the standard specifications)
 
-![](../images/01/monkeypad_1_01.jpeg)
+![Low-Profile Monkeypad](../images/01/monkeypad_1_01.jpeg)
 
-  - [1. Before You Start](01_build_guide.md)
-    - [1-1. Kit Contents](#1-1Kit_Contents)
-    - [1-2. Components to Prepare Yourself before Assembly](#1-2Components_to_Prepare_Yourself_before_Assembly)
-    - [1-3. Optional Parts](#1-3Optional_Parts)
-    - [1-4. Additional Modules](#1-4Additional_Modules_sold_separately)
-  - [2. Build Preparation](02_build_preparation.md)
-    - [2-1. Required Tools](./02_build_preparation.md/#2-1Required_Tools)
-  - [3. Soldering](03_soldering.md)
-    - [3-1. Assembly Instructions](./03_soldering.md/#3-1Assembly Instructions)
-    - [3-2. Installing the Diodes](./03_soldering.md/#3-2Installing the Diodes)
-    - [3-3. Installing the Resistors](./03_soldering.md/#3-3Installing the Resistors)
-    - [3-4. Installing the Key Sockets](./03_soldering.md/#3-4Installing the Key Sockets)
-  - [4. Assembling the Joystick](04_joystick.md)  
-    - [4-1. Components](./04_joystick.md/#4-1Components)
-    - [4-2. Assembling the Joystick Module](./04_joystick.md/#4-2Assembling the Joystick Module)
-    - [4-3. Installing the Joystick](./04_joystick.md/#4-3Installing the Joystick)
-  - [5. Assembling the Encoder](05_rotary_encoder.md)
-    - [5-1. Components](./05_rotary_encoder.md/#5-1Components)
-    - [5-2. Soldering the Encoder Components](./05_rotary_encoder.md/#5-2Soldering the Encoder Components)
-    - [5-3. Assembling the Encoder Module](./05_rotary_encoder.md/#5-3Assembling the Encoder Module)
-  - [6. Assembling the Trackball Module (PMW3389)](06_trackball_PMW3389.md)
-    - [6-1. Components](./06_trackball_PMW3389.md/#6-1Components)
-    - [6-2. Soldering the PMW3389 Components](./06_trackball_PMW3389.md/#6-2Soldering the PMW3389 Components)
-    - [6-3. Assembling the Trackball](./06_trackball_PMW3389.md/#6-3Assembling the Trackball)  
-  - [7. Assembling the Sub PCB boards (Left/Right)](07_sub_pcb_board.md)
-    - [7-1. Components](./07_sub_pcb_board.md/#7-1Components)
-    - [7-2. Soldering the Subboard Components](./07_sub_pcb_board.md/#7-2Soldering the Subboard Components)
-  - [8. Assembling the Main PCB boards (Left/Right)](08_main_pcb_board.md)
-    - [8-1. Components](./08_main_pcb_board.md/#8-1Components)
-    - [8-2. Soldering the Mainboard Components](./08_main_pcb_board.md/#8-2Soldering the Mainboard Components)
-  - [9. Preliminary Testing](09_pre_test.md)
-    - [9-1. Components](./09_pre_test.md/#9-1Writing the Test Firmware)
-    - [9-2. Soldering the Mainboard Components](./09_pre_test.md/#9-2Testing)
-  - [10. Assembly](10_assembly.md)
-    - [10-1. Assembling the Mainboard](./10_assembly.md/#10-1Assembling the Mainboard)
-    - [10-2. Installing the Tripod Adapter](./10_assembly.md/#10-2Installing the Tripod Adapter)
-    - [10-3. Assembling the Subboards](./10_assembly.md/#10-3Assembling the Subboards)
-    - [10-4. Attaching the Rubber Pads](./10_assembly.md/#10-4Attaching the Rubber Pads)
-  - [11. 11. Finished!](11_finished.md)
-    - [11-1. Writing the Firmware](./11_finished.md/#11-1Writing the Firmware)
-    - [11-2. Testing](./11_finished.md/#11-2Testing)
+- [1. Before Assembly](01_build_guide.md)
+  - [1-1. Kit Contents](#1-1-kit-contents)
+  - [1-2. Parts to Prepare by Yourself Before Assembly](#1-2-parts-to-prepare-by-yourself-before-assembly)
+  - [1-3. Options](#1-3-options)
+  - [1-4. Additional Modules (Sold Separately)](#1-4-additional-modules-sold-separately)
+- [2. Preparation](02_preparation.md)
+  - [2-1. Required Tools](./02_preparation.md/#2-1-required-tools)
+- [3. Soldering](03_soldering.md)
+  - [3-1. Before Soldering](./03_soldering.md/#3-1-before-soldering)
+  - [3-2. Installing Diodes](./03_soldering.md/#3-2-installing-diodes)
+  - [3-3. Installing Resistors](./03_soldering.md/#3-3-installing-resistors)
+  - [3-4. Installing Key Sockets](./03_soldering.md/#3-4-installing-key-sockets)
+- [4. Assembling the Joystick](04_joystick.md)  
+  - [4-1. Parts Used](./04_joystick.md/#4-1-parts-used)
+  - [4-2. Assembling the Joystick Module](./04_joystick.md/#4-2-assembling-the-joystick-module)
+  - [4-3. Installing the Joystick](./04_joystick.md/#4-3-installing-the-joystick)
+- [5. Assembling the Encoder](05_encoder.md)
+  - [5-1. Parts Used](./05_encoder.md/#5-1-parts-used)
+  - [5-2. Soldering Encoder Components](./05_encoder.md/#5-2-soldering-encoder-components)
+  - [5-3. Assembling the Encoder Module](./05_encoder.md/#5-3-assembling-the-encoder-module)
+- [6. Assembling the Trackball Module (PMW3389)](06_trackball_PMW3389.md)
+  - [6-1. Parts Used](./06_trackball_PMW3389.md/#6-1-parts-used)
+  - [6-2. Soldering PMW3389 Components](./06_trackball_PMW3389.md/#6-2-soldering-pmw3389-components)
+  - [6-3. Assembling the Trackball](./06_trackball_PMW3389.md/#6-3-assembling-the-trackball-module)  
+- [7. Assembling the Sub-Board (Left/Right)](07_sub_pcb_board.md)
+  - [7-1. Parts Used](./07_sub_pcb_board.md/#7-1-parts-used)
+  - [7-2. Soldering Sub-Board Components](./07_sub_pcb_board.md/#7-2-soldering-sub-board-components)
+- [8. Assembling the Main Board (Left/Right)](08_main_pcb_board.md)
+  - [8-1. Parts Used](./08_main_pcb_board.md/#8-1-parts-used)
+  - [8-2. Soldering Main Board Components](./08_main_pcb_board.md/#8-2-soldering-main-board-components)
+- [9. Preliminary Test](09_pre_test.md)
+  - [9-1. Writing the Test Firmware](./09_pre_test.md/#9-1-writing-the-test-firmware)
+  - [9-2. Testing](./09_pre_test.md/#9-2-testing)
+- [10. Assembly](10_assembly.md)
+  - [10-1. Assembling the Main Board](./10_assembly.md/#10-1-assembling-the-main-board)
+  - [10-2. Attaching the Tripod Adapter](./10_assembly.md/#10-2-attaching-the-tripod-adapter)
+  - [10-3. Assembling the Sub-Board](./10_assembly.md/#10-3-assembling-the-sub-board)
+  - [10-4. Attaching the Rubber Pads](./10_assembly.md/#10-4-attaching-the-rubber-pads)
+- [11. Finished!](11_finished.md)
+  - [11-1. Writing the Firmware](./11_finished.md/#11-1-writing-the-firmware)
+  - [11-2. Testing](./11_finished.md/#11-2-testing)
 
 ## 1. Before You Start
 
@@ -56,7 +56,7 @@ Low-profile specifications (can be modified by adding components after assembly 
 
 Monkeypad consists of a main board featuring a Raspberry Pi Pico that users can customize freely, along with a sub-board for mounting a 4x6 key switch layout and multiple modules.
 
-The included key sockets only support standard MX Kailh key switch sockets. However, for the 24 key switches on one side of the sub-board, you can change or add low-profile switches. The main board only supports MX key switches. Low-profile Kailh PCB Choc sockets are sold separately.
+Additionally, the included key sockets are only standard MX Kailh key switch sockets. However, for 24 key switches on one side of the sub-board, you can change or add low-profile key switches with lower key heights. The main board can only support MX key switches. Low-profile key socket Kailh PCB socket choc version is sold separately.
 
 Please note that creating low-profile configurations differs from the standard setup in the following steps.
 
@@ -179,27 +179,27 @@ This is a bonus item. Please note that since it was made using a home 3D printer
 
 Although it works with the Pico W, QMK does not support wireless functionality. Pico-compatible products can also be installed.
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 51 | [Raspberry Pi Pico](https://shop.yushakobo.jp/products/raspberry-pi-pico) | 2 pieces |  |
 
 ![](../images/01/monkeypad_1_20.jpeg)
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 52 | [Cherry MX Compatible Key Switches](https://shop.yushakobo.jp/collections/all-switches) | 52 pieces | If configuring the sub-board for low-profile use, only 4 pieces are necessary |
 
 ![](../images/01/monkeypad_1_21.jpeg)
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 53 | [Keycaps](https://shop.yushakobo.jp/collections/keycaps) | 52 pieces |  |
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 54 | Trackball with 34mm Diameter | 1 piece |  |
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 55 | [Micro USB Cable](https://shop.yushakobo.jp/products/usb-cable-micro-b-0-8m)| 1 piece | |
 
@@ -209,7 +209,7 @@ The PCB supports MAC8 "Conthrough" connectors, popular in DIY keyboards, allowin
 
 Options Required Before Assembly
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 56 | [Conthrough 20-pin Height 2.5mm (Low-Profile)](https://talpkeyboard.net/items/6326b97df308654990631828) | 4個 | If you want to make the Pico replaceable (usually unnecessary) |
 
@@ -217,7 +217,7 @@ Options That Can Be Added Even After Assembly
 
 Only necessary if you want to configure the sub-board for low-profile use (it can also be modified later by adding it).
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 | 47 | [Low-Profile Key Switches] | 48 pieces |
 | 48 | [Low-Profile Keycaps] | 48 pieces |
@@ -241,4 +241,5 @@ While one module each of the trackball sensor, rotary encoder, and joystick is i
 | 63 | Analog Joystick Module | Set |
 | 64 | Encoder Module | Set |
 
-  - [Next(02_build_preparation)](02_build_preparation.md)
+  - [Next(02_build_preparation)](02_preparation.md)
+

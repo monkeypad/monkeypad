@@ -1,55 +1,54 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-  - [B. アジャスタブルリンクの組み立て](B02_adujstable_link.md)
-    - [B-1. 使用する部品](./B02_adujstable_link.md/#B-1使用する部品)
-    - [B-2. アジャスタブルリンクの組み立て](./B02_adujstable_link.md/#B-2アジャスタブルリンクの組み立て)  
+- [B. Assembling the Adjustable Link](B02_Adjustable_Link.md)
+  - [B-1. Parts Used](./B02_Adjustable_Link.md/#b-1-parts-used)
+  - [B-2. Assembling the Adjustable Link](./B02_Adjustable_Link.md/#b-2-assembling-the-adjustable-link)  
 
-![](../images/B02/monkeypad_b02_00_front.jpg)
+![Front View](../images/B02/monkeypad_b02_00_front.jpg)
 
-![](../images/B02/monkeypad_b02_00_back.jpg)
+![Back View](../images/B02/monkeypad_b02_00_back.jpg)
 
-### B-1．使用する部品
+### B-1. Parts Used
 
-追加オプションのアジャスタブルリンクの組み立てです。
+This section covers assembling the optional adjustable link.
 
-| No | 名前 | 数 | 備考 |
-|:-|:-|:-|:-|
-| 81 | 1/4インチネジ | 2個 ||
-| 82 | リンク(short) | 2個 ||
-| 83 | リンク(long) | 2個 ||
-| 84 | ワッシャー | 2個 ||
-| 38 | 低頭ネジ M3 x 12mm | 2個 ||
-| 41 | 六角ナット M3 | 2個 ||
+| No | Name | Quantity | Notes |
+|:-:|:---|:---:|:---:|
+| 81 | 1/4-Inch Screw | 2 pcs | |
+| 82 | Link (Short) | 2 pcs | |
+| 83 | Link (Long) | 2 pcs | |
+| 84 | Washer | 2 pcs | |
+| 38 | Low-Profile Screw M3 x 12mm | 2 pcs | |
+| 41 | Hex Nut M3 | 2 pcs | |
 
-![](../images/B02/monkeypad_b02_01.jpg)
+![Parts Used](../images/B02/monkeypad_b02_01.jpg)
 
+### B-2. Assembling the Adjustable Link
 
-### B-2．アジャスタブルリンクの組み立て
+Remove the two M3 screws from the torque hinges as shown in the figure. Be careful not to lose the removed screws and nuts as they will be reused.
 
-トルクヒンジのM3ネジを図のように二つ取り外します。外したネジとナットは使用しますので無くさないように注意してください。
+![Removing Screws](../images/B02/monkeypad_b02_02.jpg)
 
-![](../images/B02/monkeypad_b02_02.jpg)
+Remove the protective sheet from the acrylic surface.
 
-アクリルの表面の保護シートを外します。
+![Removing Protective Sheet](../images/B02/monkeypad_b02_03.jpg) 
 
-![](../images/B02/monkeypad_b02_03.jpg) 
+Fix the [82] Link (Short) and [83] Link (Long) using [38] M3 low-profile screws and [41] M3 nuts.
 
-[82]リンク(short)と[83]リンク(long)を[38]M3低頭ネジと[41]M3ナットで固定します。
+![Fixing Links](../images/B02/monkeypad_b02_04.jpg)  
 
-![](../images/B02/monkeypad_b02_04.jpg)  
+Fix the [82] Link (Short) and torque hinge using [38] M3 low-profile screws and [41] M3 nuts.
 
-[82]リンク(short)とトルクヒンジを[38]M3低頭ネジと[41]M3ナットで固定します。
+![Fixing Link to Torque Hinge](../images/B02/monkeypad_b02_05.jpg)  
 
-![](../images/B02/monkeypad_b02_05.jpg)  
+Insert [84] Washers.
 
-[84]ワッシャーを入れます。
+![Inserting Washers](../images/B02/monkeypad_b02_06.jpg)  
 
-![](../images/B02/monkeypad_b02_06.jpg)  
+Pay attention to the direction as you stack them according to the diagram.
 
-重ねる方向を図を見ながら注意してください。
+![Stacking Links](../images/B02/monkeypad_b02_07.jpg)  
 
-![](../images/B02/monkeypad_b02_07.jpg)  
+Adjust to your preferred position and angle, then fix with 1/4-Inch screws. Assemble the other side in the same way.
 
-お好きな位置・角度に調整し、1/4インチネジで固定、完成です。反対側も同様に組み立てます。
-
-![](../images/B02/monkeypad_b02_08.jpg)  
+![Final Assembly](../images/B02/monkeypad_b02_08.jpg)  

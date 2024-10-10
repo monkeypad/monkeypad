@@ -1,9 +1,9 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-  - [6. Assembling the Trackball Module (PMW3389)](06_trackball_PMW3389.md)
-    - [6-1. Components](./06_trackball_PMW3389.md/#6-1Components)
-    - [6-2. Soldering the PMW3389 Components](./06_trackball_PMW3389.md/#6-2Soldering the PMW3389 Components)
-    - [6-3. Assembling the Trackball](./06_trackball_PMW3389.md/#6-3Assembling the Trackball)  
+- [6. Assembling the Trackball Module (PMW3389)](06_trackball_PMW3389.md)
+  - [6-1. Parts Used](./06_trackball_PMW3389.md/#6-1-parts-used)
+  - [6-2. Soldering PMW3389 Components](./06_trackball_PMW3389.md/#6-2-soldering-pmw3389-components)
+  - [6-3. Assembling the Trackball](./06_trackball_PMW3389.md/#6-3-assembling-the-trackball-module)  
 
 ### 6-1.Components
 
@@ -11,7 +11,7 @@ Next, we'll assemble the trackball module.
 
 The trackball uses the high-performance PMW3389DM-T3QU optical mouse sensor manufactured by PIXART. The sensor chip is located on the SENSOR side, and the side where small components are pre-mounted is the LENS side.
 
-| No | Name	| Quantity | Remarks |
+| No | Name	| Quantity | Notes |
 |:-|:-|:-|:-|
 |  5 | Trackball PCBA Board | 1 piece ||
 | 12 | Trackball Cover | 1 piece ||

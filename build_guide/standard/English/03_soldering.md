@@ -1,10 +1,10 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-  - [3. Soldering](03_soldering.md)
-    - [3-1. Assembly Instructions](./03_soldering.md/#3-1Assembly Instructions)
-    - [3-2. Installing the Diodes](./03_soldering.md/#3-2Installing the Diodes)
-    - [3-3. Installing the Resistors](./03_soldering.md/#3-3Installing the Resistors)
-    - [3-4. Installing the Key Sockets](./03_soldering.md/#3-4Installing the Key Sockets)
+- [3. Soldering](03_soldering.md)
+  - [3-1. Before Soldering](./03_soldering.md/#3-1-before-soldering)
+  - [3-2. Installing Diodes](./03_soldering.md/#3-2-installing-diodes)
+  - [3-3. Installing Resistors](./03_soldering.md/#3-3-installing-resistors)
+  - [3-4. Installing Key Sockets](./03_soldering.md/#3-4-installing-key-sockets)
 
 ## 3.Soldering
 ### 3-1.Assembly Instructions

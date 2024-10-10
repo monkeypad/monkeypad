@@ -6,10 +6,10 @@ First, we will begin by assembling the three modules: the joystick, encoder, and
 
 ![](../images/04/monkeypad_4_01.jpeg)     
 
-  - [4. Assembly of the Joystick](04_joystick.md)  
-    - [4-1. Components](./04_joystick.md/#4-1Components)
-    - [4-2. Soldering the Joystick Components](./04_joystick.md/#4-2Soldering the Joystick Components)
-    - [4-3. Assembling the Joystick Module](./04_joystick.md/#4-3Assembling the Joystick Module)
+- [4. Assembling the Joystick](04_joystick.md)  
+  - [4-1. Parts Used](./04_joystick.md/#4-1-parts-used)
+  - [4-2. Assembling the Joystick Module](./04_joystick.md/#4-2-assembling-the-joystick-module)
+  - [4-3. Installing the Joystick](./04_joystick.md/#4-3-installing-the-joystick)
 
 ### 4-1.Components
 
@@ -71,4 +71,4 @@ Push the thumbstick all the way in to complete the joystick module.
 ![](../images/04/monkeypad_4_11.jpeg)
 
 
-  - [Next(05_rotary_encoder)](05_rotary_encoder.md)
+  - [Next(05_encoder)](05_encoder.md)

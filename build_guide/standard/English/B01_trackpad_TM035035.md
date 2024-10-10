@@ -1,75 +1,75 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-  - [B. トラックパッドモジュールの組み立て](B01_トラックパッド_TM035035.md)
-    - [B-1. 使用する部品](./B01_トラックパッド_TM035035.md/#B-1使用する部品)
-    - [B-2. PMW3389部品のはんだ付け](./B01_トラックパッド_TM035035.md/#B-2部品のはんだ付け)
-    - [B-3. トラックボールモジュールの組み立て](./B01_トラックパッド_TM035035.md/#B-3トラックパッドモジュールの組み立て)  
+- [B. Assembling the Trackpad Module](B01_trackpad_TM035035.md)
+  - [B-1. Parts Used](./B01_trackpad_TM035035.md/#b-1-parts-used)
+  - [B-2. Soldering PMW3389 Components](./B01_trackpad_TM035035.md/#b-2-soldering-pmw3389-components)
+  - [B-3. Assembling the Trackpad Module](./B01_trackpad_TM035035.md/#b-3-assembling-the-trackpad-module)  
 
-### B-1．使用する部品
+### B-1. Parts Used
 
-追加オプションのトラックパッドモジュールの組み立てです。
-Cirque社製のトラックパッドモジュール(TM035035-2024-003)を使用します。SPI通信（12ピン）をMonkeypadのモジュールと接続するために変換基板を経由し接続します。
+This section covers assembling the optional trackpad module.
+We use the Cirque-manufactured trackpad module (TM035035-2024-003). To connect the SPI communication (12-pin) to the Monkeypad module, connect via a conversion board.
 
-| No | 名前 | 数 | 備考 |
-|:-|:-|:-|:-|
-| 71 | トラックパッド変換基板 | 1個 ||
-| 72 | トラックパッドカバー(下) | 1個 ||
-| 73 | トラックパッドカバー(上) | 1個 ||
-| 74 | FFC/FPCフラットケーブル | 1個 ||
-| 28 | ピンヘッダ8ピンL型 | 1個 ||
-| 76 | タッピングネジ M2 x 6mm | 8個 ||
-| 77 | トラックパッド(TM035035-2024-003) | 1個 ||
+| No | Name | Quantity | Notes |
+|:-:|:---|:---:|:---:|
+| 71 | Trackpad Conversion Board | 1 pc | |
+| 72 | Trackpad Cover (Bottom) | 1 pc | |
+| 73 | Trackpad Cover (Top) | 1 pc | |
+| 74 | FFC/FPC Flat Cable | 1 pc | |
+| 28 | 8-Pin L-Shaped Pin Header | 1 pc | |
+| 76 | Self-Tapping Screw M2 x 6mm | 8 pcs | |
+| 77 | Trackpad (TM035035-2024-003) | 1 pc | |
 
-![](../images/B01/monkeypad_b01_01b.jpg)
-![](../images/B01/monkeypad_b01_01w.jpg)
+![Image1](../images/B01/monkeypad_b01_01b.jpg)
+![Image2](../images/B01/monkeypad_b01_01w.jpg)
 
-![](../images/B01/monkeypad_b01_02.jpg)
+![Image3](../images/B01/monkeypad_b01_02.jpg)
 
-### B-2．PMW3389部品のはんだ付け
+### B-2. Soldering PMW3389 Components
 
-トラックパッド部品のはんだ付けは[28]ピンヘッダ8ピンL型をはんだ付けします。
+For soldering the trackpad components, solder the [28] 8-Pin L-Shaped Pin Header.
 
-***重要***
-写真を見て、向きに注意してください。
+***Important***
+Refer to the photos and pay attention to the orientation.
 
-「BOTTOM」側に[28]8ピンL型のピンヘッダを固定し、水平に取り付くように裏面をハンダづけします。
+Fix the [28] 8-Pin L-Shaped Pin Header on the "BOTTOM" side and solder the backside so that it sits horizontally.
 
-![](../images/B01/monkeypad_b01_03.jpg) 
+![Image4](../images/B01/monkeypad_b01_03.jpg) 
 
-![](../images/B01/monkeypad_b01_04.jpg)  
+![Image5](../images/B01/monkeypad_b01_04.jpg)  
 
-### B-3. トラックパッドモジュールの組み立て
+### B-3. Assembling the Trackpad Module
 
-[74]コネクタ部の爪を起こし、FFC/FPCフラットケーブルを青い面が上、ピンが下にくるように接続します。
+Raise the clips on the [74] connector part and connect the FFC/FPC flat cable so that the blue side is on top and the pins are at the bottom.
 
-![](../images/B01/monkeypad_b01_05.jpg)  
+![Image6](../images/B01/monkeypad_b01_05.jpg)  
 
-![](../images/B01/monkeypad_b01_06.jpg)  
+![Image7](../images/B01/monkeypad_b01_06.jpg)  
 
-[73]次に、トラックパッドカバー(上) に[77]トラックパッド(TM035035-2024-003)をはめます。図のように切り欠き部が揃うようにトラックパッドをはめてください。
+Next, insert the [77] Trackpad (TM035035-2024-003) into the Trackpad Cover (Top) [73]. Insert the trackpad so that the notched areas align as shown in the figure.
 
-![](../images/B01/monkeypad_b01_07.jpg)  
+![Image8](../images/B01/monkeypad_b01_07.jpg)  
 
-トラックパッドをマスキングテープで止めておくと、部品のカタつきが抑えられます。
+Securing the trackpad with masking tape helps prevent the components from shifting.
 
-![](../images/B01/monkeypad_b01_08.jpg)  
+![Image9](../images/B01/monkeypad_b01_08.jpg)  
 
-トラックパッドと[73]トラックパッドカバー(上)を[72]トラックパッドカバー(下)にピンの位置を合わせてかぶせます。
+Align the pins of the trackpad and [73] Trackpad Cover (Top) with [72] Trackpad Cover (Bottom) and overlay them.
 
-![](../images/B01/monkeypad_b01_09.jpg)  
+![Image10](../images/B01/monkeypad_b01_09.jpg)  
 
-[76]M2タッピングネジでトラックボールカバーを固定します。
+Fix the Trackpad Cover with [76] M2 self-tapping screws.
 
-![](../images/B01/monkeypad_b01_10.jpg)  
+![Image11](../images/B01/monkeypad_b01_10.jpg)  
 
-ケーブルをトラックパッドに接続します。向きに注意してください。
+Connect the cable to the trackpad, paying attention to the orientation.
 
-![](../images/B01/monkeypad_b01_11.jpg)  
+![Image12](../images/B01/monkeypad_b01_11.jpg)  
 
-M2タッピングネジで変換基板を固定します。
+Fix the conversion board with M2 self-tapping screws.
 
-![](../images/B01/monkeypad_b01_12.jpg)  
+![Image13](../images/B01/monkeypad_b01_12.jpg)  
 
-トラックパッドモジュールの完成です。
+The Trackpad Module is now complete.
 
-![](../images/B01/monkeypad_b01_13.jpg)  
+![Image14](../images/B01/monkeypad_b01_13.jpg)  

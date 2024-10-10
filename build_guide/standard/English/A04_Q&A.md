@@ -1,68 +1,6 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
 ### Q&A
-うまく動作しない場合、以下を確認してください。
-- Raspberry Pi PicoがPCで認識しない。
-  - メインボード、モジュールなどの機能が全て動かない場合、電源系での不良が起きている可能性がります。サブボードや左右間のTRRSケーブルを外し、単体で動作チェックを行なってください。
-
-  - Raspberry Pi 公式ページの一番下の flash_nuke.uf2 を使うとRaspberry Pi Picoを工場出荷状態に戻すことができます。
-https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html
-
-- 特定のキーが反応しない
-  - ダイオードの向きはあっているか
-  - キーソケットは確実にはんだ付けされているか。爪やピンセットで触ってみてソケットが浮かないか確認しましょう。
-  - キースイッチのピンが曲がっていないか
-  - 基板とトッププレートがしっかりと固定されているか
-
-- サブボードのキーだけが反応しない
-  - メイン、サブ間のTRRSケーブルがしっかりと奥までささっているか
-  - TRRSケーブルのさす場所を間違えていないか
-  - 基板とトッププレートが干渉していないか（ニッパーで余分な長さをカットしたか）
-  - 抵抗の値は間違えていないか
-  - テスターをお持ちの場合は、テスターでメインとサブの接続を確認してください。電源3.3V付近の電圧が測定できるかを確認してください。
-
-- USBを接続していないボードのキーが反応しない
-  - 片側ずつ繋いでそれぞれのキースイッチが動作するか。
-  - Raspberry Pi Picoの左右通信用のTRRSケーブルがしっかりとささっているか。
-  - テスターで接続を確認してください。
-
-- LEDが光らない
-（他の機能が問題なく動く場合）
-  - LEDの向きが間違えていないか
-  - サブボード側での電源不良が起きていないか。サブボードを一旦外して他の機能が動くか確認してください。
-  - 誤ってキーを押して、LEDの設定が書き変わってしまっていないか。（LEDオフのボタンを押していないか）
-
-- USBを接続していないボード側が動かない
-  - Raspberry Pi Picoの左右通信用のTRRSケーブルがしっかりとささっているか確認してください。
-  - 片側ずつPCに接続して動作確認をしてみてください。
-  - テスターで接続を確認してください。
-
-- アナログジョイスティックのカスタムキーが反応しない
-  - アナログジョイスティックが付いている側のみが機能します。USBの接続先を確認してください。
-
-- アナログジョイスティックの動きが遅い
-  - PCにUSBで接続していない場合、仕様として遅くなることが確認されています。USBの接続先を確認してください。
-  　それでも遅いと感じる場合は、Remapの`analog_joystick.c`のビルドパラメータを変更して好みのスピードを設定し、オリジナルのファームウェアを作成してください。
-
-- マウスカーソルがドリフトする/勝手に動く
-  - ジョイスティックを取り付けている場合、起動時の位置を初期状態として読み取ります。ジョイスティックに触れないようにしてリセットボタンを押すか、USBケーブルをつなぎ直して再起動してください。モジュールにジョイスティックを使用していない場合は、適切なファームウェアが書き込まれているか確認してください。
-
-- トラックボールの動きが遅い
-  - PCにUSBで接続していない場合、仕様として遅くなることが確認されています。トラックボールは、速度を決定するDPIの値を即座にキーで変更することができます。Layer(3)のFn Layerにカスタムキー{DPI_UP(速くする), DPI_DN(遅くする), DPI_RST(リセットする)}を押すことで、トラックボールの動きを変更できます。[Default Keymap](../images/keymap_cheatsheet_monkeypad.pdf)をご確認ください。また、Remapの`monkeypad.c`のビルドパラメータを変更して、DPIのレンジ、デフォルト値を設定し、オリジナルのファームウェアを作成することもできます。
-
-- マウスカーソルが遅れる/カクつく
-  - USBで左右両方をPCに接続すると左右間の通信を行い続けようとするため遅れが生じます。どちらか一方をPCに接続し、左右間はTRRSケーブルで接続してください。
-  - 同様にスプリットキーボード用ファームウェアを書き込み、片手のみの利用だとカーソルがカクつきます。
-
-- トラックボールが反応しない/反応が悪い。
-  - レンズが取り付けられているか確認してください
-  - センサーの向きが正しく取り付けられているか確認してください
-  - ボールとセンサーの距離が水平に正しく取れていない可能性があります。取り付けのネジが正しく付いていること、レンズがカタついたり斜めに取り付くとセンサーが正確に認識しない場合があります。
-  マスキングテープなどでレンズが動かないように裏面から貼ったり、トラックボールカバーを外してセンサーだけを取り付けた状態で反応するか試してみてください。
-
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
-### Q&A
 
 If your Monkeypad is not functioning correctly, please check the following:
 
@@ -157,5 +95,3 @@ If your Monkeypad is not functioning correctly, please check the following:
   - **Adjust sensor distance:** The distance between the ball and sensor should be correctly set horizontally. Ensure that mounting screws are properly tightened and that the lens is not floating or attached at an angle, as this can prevent the sensor from accurately recognizing movements.
   
   - **Secure the lens:** Try fixing the lens from the backside with masking tape to prevent movement, or test the sensor by mounting only the sensor without the trackball cover.
-
----
