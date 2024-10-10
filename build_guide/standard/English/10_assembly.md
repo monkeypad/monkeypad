@@ -1,10 +1,8 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
-- [10. Assembly](10_Assembly.md)
-  - [10-1. Assembling the Main Board](./10_Assembly.md/#10-1-assembling-the-main-board)
-  - [10-2. Attaching the Tripod Adapter](./10_Assembly.md/#10-2-attaching-the-tripod-adapter)
-  - [10-3. Assembling the Sub-Board](./10_Assembly.md/#10-3-assembling-the-sub-board)
-  - [10-4. Attaching the Rubber Pads](./10_Assembly.md/#10-4-attaching-the-rubber-pads)
+- [10. Assembly](10_assembly.md)
+  - [10-1. Assembling the Main Board](./10_assembly.md/#10-1Assembly-of-the-Main-Board)
+  - [10-2. Attaching the Tripod Adapter](./10_assembly.md/#10-2Attaching-the-Tripod-Adapter)
+  - [10-3. Assembling the Sub-Board](./10_assembly.md/#10-3Assembling-the-Sub-Board)
+  - [10-4. Attaching the Rubber Pads](./10_assembly.md/#10-4Attaching-the-Rubber-Pads)
 
 ### 10-1. Assembly of the Main Board
 

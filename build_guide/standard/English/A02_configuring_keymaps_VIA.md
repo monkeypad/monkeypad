@@ -1,9 +1,7 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
-  - [A02. Changing the Keymap (VIA)](A02_Changing_Keymap_VIA.md)
-    - [A02-1. Changing the Keymap (VIA)](#a02-1-VIA-Configuration-File)
-    - [A02-2. Custom Keycodes](#a02-2Custom-Keycodes)
-    - [A02-3. Building from Source](#a02-3Building-from-Source)
+- [A02. Changing the Keymap (VIA)](A02_Changing_Keymap_VIA.md)
+  - [A02-1. Changing the Keymap (VIA)](#a02-1-VIA-Configuration-File)
+  - [A02-2. Custom Keycodes](#a02-2Custom-Keycodes)
+  - [A02-3. Building from Source](#a02-3Building-from-Source)
 
 ### A02-1. VIA Configuration File
 

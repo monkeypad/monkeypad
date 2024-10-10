@@ -1,5 +1,3 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 - [A01. Changing the Keymap (Remap)](A01_Changing_Keymap_Remap.md)
   - [A01-1. Changing the Keymap (Remap)](#A01-1Changing-the-Keymap-(Remap))
   - [A01-2. For Deeper Customization](#A01-2For-Deeper-Customization)

@@ -1,4 +1,4 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
+## 日本語のビルドガイドはこちら [Japanese](../Japanese/01_build_guide.md)
 
 ### Standard Specifications
 
@@ -12,7 +12,7 @@
   - [1-1. Kit Contents](#1-1Kit-Contents)
   - [1-2. Parts to Prepare by Yourself Before Assembly](#1-2Parts-You-Need-to-Prepare-Yourself-Before-Assembly)
   - [1-3. Options](#1-3Supported-Options)
-  - [1-4. Additional Modules (Sold Separately)](#1-4Additional-Modules-(Sold Separately))
+  - [1-4. Additional Modules](#1-4Additional-Modules)
 - [2. Preparation](02_preparation.md)
   - [2-1. Required Tools](./02_preparation.md/#2-1Required-Tools)
 - [3. Soldering](03_soldering.md)
@@ -230,8 +230,8 @@ Only necessary if you want to configure the sub-board for low-profile use (it ca
 
 ![](../images/01/monkeypad_1_27.jpeg)
 
-### 1-4.Additional Modules (Sold Separately)
-
+### 1-4.Additional Modules
+**Sold Separately**
 While one module each of the trackball sensor, rotary encoder, and joystick is included as standard, you can freely customize according to your needs—for example, by using dual trackballs or dual joysticks. We are also preparing to sell custom rotary encoders, joysticks, and trackballs for additional purchase.
 
 | No | Name	| Quantity |

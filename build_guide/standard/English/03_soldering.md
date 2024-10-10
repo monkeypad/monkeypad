@@ -1,5 +1,3 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 - [3. Soldering](03_soldering.md)
   - [3-1. Before Soldering](./03_soldering.md/#3-1Assembly-Instructions)
   - [3-2. Installing Diodes](./03_soldering.md/#3-2Installing-the-Diodes)

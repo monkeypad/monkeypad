@@ -1,7 +1,7 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
 - [B. Assembling the Trackpad Module](B01_trackpad_TM035035.md)
-  - [B-1. Parts Used](./B01_trackpad_TM035035.md/#b-1Components)
+  - [B-1. Components](./B01_trackpad_TM035035.md/#b-1Components)
   - [B-2. Soldering PMW3389 Components](./B01_trackpad_TM035035.md/#b-2Soldering-PMW3389-Components)
   - [B-3. Assembling the Trackpad Module](./B01_trackpad_TM035035.md/#b-3Assembling-the-Trackpad-Module)  
 

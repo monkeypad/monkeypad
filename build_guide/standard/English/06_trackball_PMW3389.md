@@ -1,9 +1,7 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 - [6. Assembling the Trackball Module (PMW3389)](06_trackball_PMW3389.md)
-  - [6-1. Components](./06_trackball_PMW3389.md/#6-1-parts-used)
-  - [6-2. Soldering PMW3389 Components](./06_trackball_PMW3389.md/#6-2-soldering-pmw3389-components)
-  - [6-3. Assembling the Trackball](./06_trackball_PMW3389.md/#6-3-assembling-the-trackball-module)  
+  - [6-1. Components](./06_trackball_PMW3389.md/#6-1Components)
+  - [6-2. Soldering PMW3389 Components](./06_trackball_PMW3389.md/#6-2Soldering-the-PMW3389-Components)
+  - [6-3. Assembling the Trackball](./06_trackball_PMW3389.md/#6-3Assembling-the-Trackball-Module)
 
 ### 6-1.Components
 

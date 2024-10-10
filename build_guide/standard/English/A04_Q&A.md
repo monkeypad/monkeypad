@@ -1,5 +1,3 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 ### Q&A
 
 If your Monkeypad is not functioning correctly, please check the following:

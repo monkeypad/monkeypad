@@ -1,9 +1,7 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
+- [11. Finished!](11_finished.md)
+  - [11-1. Writing the Firmware](./11_finished.md/#11-1Writing-the-Firmware)
+  - [11-2. Testing](./11_finished.md/#11-2Testing)
 
-- [11. Finished!](11_Finished.md)
-  - [11-1. Writing the Firmware](./11_Finished.md/#11-1-writing-the-firmware)
-  - [11-2. Testing](./11_Finished.md/#11-2-testing)
-  
 ### 11-1. Writing the Firmware
 
 Choose and install the left and right modules in any combination you prefer.

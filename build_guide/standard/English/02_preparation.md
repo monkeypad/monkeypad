@@ -1,7 +1,5 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
-  - [2. Build Preparation](02_preparation.md)
-    - [2-1. Required Tools](./02_preparation.md/#2-1Required_Tools)
+- [2. Preparation](02_preparation.md)
+  - [2-1. Required Tools](./02_preparation.md/#2-1Required-Tools)
 
 ## 2.Build Preparation
 ### 2-1.Required Tools

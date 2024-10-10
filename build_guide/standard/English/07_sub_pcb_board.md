@@ -1,8 +1,6 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 - [7. Assembling the Sub-Board (Left/Right)](07_sub_pcb_board.md)
-  - [7-1. Components](./07_sub_pcb_board.md/#7-1-parts-used)
-  - [7-2. Soldering Sub-Board Components](./07_sub_pcb_board.md/#7-2-soldering-sub-board-components)
+  - [7-1. Components](./07_sub_pcb_board.md/#7-1Components)
+  - [7-2. Soldering Sub-Board Components](./07_sub_pcb_board.md/#7-2Soldering-the-Sub-Board-Components)
 
 ### 7-1.Components
 

@@ -1,5 +1,3 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 ## 4,5,6Assembly of Module Boards
 
 First, we will begin by assembling the three modules: the joystick, encoder, and trackball.
@@ -7,9 +5,9 @@ First, we will begin by assembling the three modules: the joystick, encoder, and
 ![](../images/04/monkeypad_4_01.jpeg)     
 
 - [4. Assembling the Joystick](04_joystick.md)  
-  - [4-1. Components](./04_joystick.md/#4-1-parts-used)
-  - [4-2. Assembling the Joystick Module](./04_joystick.md/#4-2-assembling-the-joystick-module)
-  - [4-3. Installing the Joystick](./04_joystick.md/#4-3-installing-the-joystick)
+  - [4-1. Components](./04_joystick.md/#4-1Components)
+  - [4-2. Assembling the Joystick Module](./04_joystick.md/#4-2Soldering-the-Joystick-Components)
+  - [4-3. Installing the Joystick](./04_joystick.md/#4-3Assembling-the-Joystick-Module)
 
 ### 4-1.Components
 

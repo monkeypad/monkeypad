@@ -1,5 +1,3 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 ### Customization
 
 The Monkeypad is not a finished product right after assembly; it can be customized after building. By installing separately sold low-profile key switches and key sockets, you can use thin keycaps.

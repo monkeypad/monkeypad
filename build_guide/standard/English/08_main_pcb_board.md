@@ -1,8 +1,6 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 - [8. Assembling the Main Board (Left/Right)](08_main_pcb_board.md)
-  - [8-1. Components](./08_main_pcb_board.md/#8-1-parts-used)
-  - [8-2. Soldering Main Board Components](./08_main_pcb_board.md/#8-2-soldering-main-board-components)
+  - [8-1. Components](./08_main_pcb_board.md/#8-1Components)
+  - [8-2. Soldering Main Board Components](./08_main_pcb_board.md/#8-2Soldering-the-Main-Board-Components)
 
 ### 8-1.Components
 

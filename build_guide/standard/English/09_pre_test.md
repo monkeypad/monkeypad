@@ -1,8 +1,6 @@
-<!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
-
 - [9. Preliminary Test](09_pre_test.md)
-  - [9-1. Writing the Test Firmware](./09_pre_test.md/#9-1-writing-the-test-firmware)
-  - [9-2. Testing](./09_pre_test.md/#9-2-testing)
+  - [9-1. Writing the Test Firmware](./09_pre_test.md/#9-1Writing-the-Test-Firmware)
+  - [9-2. Testing](./09_pre_test.md/#9-2Testing)
 
 To minimize the need for rework, we recommend performing the preliminary test steps.
 
