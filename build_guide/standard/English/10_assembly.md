@@ -6,9 +6,7 @@
   - [10-3. Assembling the Sub-Board](./10_Assembly.md/#10-3-assembling-the-sub-board)
   - [10-4. Attaching the Rubber Pads](./10_Assembly.md/#10-4-attaching-the-rubber-pads)
 
-### 10-1.メインボードの組み立て
-
-## 10. Assembly of the Main Board
+### 10-1. Assembly of the Main Board
 
 ![Main Board Assembly](../images/10/monkeypad_10_01.jpeg)
 
@@ -50,10 +48,7 @@ The torque hinges are adjustable in hardness. Adjust the tightness of the hex nu
 
 ![](../images/10/monkeypad_10_10.jpeg)
 
-Secure the [46]Tripod Adapters to the sub-board's bottom plate using [40]M3 x 6mm Low-Profile Screws** and [41]M3 Nuts. Alternatively, you can attach [45]Grommets instead of Tripod Adapters. Use whichever you prefer.
-
-サブボードのボトムプレートにM3低頭ネジ6mmと[41]M3ナットで[46]三脚アダプタを取り付けます。
-三脚アダプタの代わりに、[45]グロメットを取り付けることも可能です。お好きな方をお使いください。
+Secure the [46] Tripod Adapters to the sub-board's bottom plate using [40] M3 x 6mm Low-Profile Screws** and [41] M3 Nuts. Alternatively, you can attach [45] Grommets instead of Tripod Adapters. Use whichever you prefer.
 
 **If attaching the Tripod Adapter:**
 
@@ -67,15 +62,13 @@ Secure the [46]Tripod Adapters to the sub-board's bottom plate using [40]M3 x 6m
 
 ### 10-3. Assembling the Sub-Board
 
-#### [サブボードにロープロファイルソケットを取り付ける場合はこちら](../low_profile/10_組み立て_ロープロ.md)
-
 #### [If attaching low-profile sockets to the sub-board, click here](../low_profile/10_Assembly_Low_Profile.md)
 
-Secure the [11]Sub Body and [8]Sub Top Plate. Insert 5 Hex Double Male Threaded Standoffs into the sub body's pockets and attach the top plate using [37]M3 x 6mm Low-Profile Screws. Attach the side with ribs to the top plate side as shown in the photo.
+Secure the [11] Sub Body and [8] Sub Top Plate. Insert 5 Hex Double Male Threaded Standoffs into the sub body's pockets and attach the top plate using [37] M3 x 6mm Low-Profile Screws. Attach the side with ribs to the top plate side as shown in the photo.
 
 ![Assembling Sub-Board](../images/10/monkeypad_10_14.jpeg)
 
-Secure the sub-board PCB using [39]M2 Screws and [42]M2 Nuts at 4 locations.
+Secure the sub-board PCB using [39] M2 Screws and [42] M2 Nuts at 4 locations.
 
 ![Securing Sub-Board PCB](../images/10/monkeypad_10_15.jpeg)
 
@@ -83,7 +76,7 @@ Ensure that the legs of the IO Expander, Jacks, and Connectors on the PCB do not
 
 *(Contact may alter resistance values, potentially causing malfunctions.)*
 
-Attach the [9]Sub Bottom Plate to the Sub Body using [6]M3 x 6mm Low-Profile Screws.
+Attach the [9] Sub Bottom Plate to the Sub Body using [6] M3 x 6mm Low-Profile Screws.
 
 Finally, secure the torque hinges. Insert [38] **M3 x 12mm Low-Profile Screws** under the nut pockets and secure them.
 

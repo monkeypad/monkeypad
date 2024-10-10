@@ -1,11 +1,11 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
 - [B. Assembling the Trackpad Module](B01_trackpad_TM035035.md)
-  - [B-1. Parts Used](./B01_trackpad_TM035035.md/#b-1-parts-used)
-  - [B-2. Soldering PMW3389 Components](./B01_trackpad_TM035035.md/#b-2-soldering-pmw3389-components)
-  - [B-3. Assembling the Trackpad Module](./B01_trackpad_TM035035.md/#b-3-assembling-the-trackpad-module)  
+  - [B-1. Parts Used](./B01_trackpad_TM035035.md/#b-1Components)
+  - [B-2. Soldering PMW3389 Components](./B01_trackpad_TM035035.md/#b-2Soldering-PMW3389-Components)
+  - [B-3. Assembling the Trackpad Module](./B01_trackpad_TM035035.md/#b-3Assembling-the-Trackpad-Module)  
 
-### B-1. Parts Used
+### B-1. Components
 
 This section covers assembling the optional trackpad module.
 We use the Cirque-manufactured trackpad module (TM035035-2024-003). To connect the SPI communication (12-pin) to the Monkeypad module, connect via a conversion board.

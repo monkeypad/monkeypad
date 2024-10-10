@@ -1,7 +1,5 @@
 <!-- ### Monkeypad Build Guide Top Page is here [English](01_build_guide.md)  -->
 
-testing...
-
 - [3. Soldering](03_soldering.md)
   - [3-1. Before Soldering](./03_soldering.md/#3-1Assembly-Instructions)
   - [3-2. Installing Diodes](./03_soldering.md/#3-2Installing-the-Diodes)
@@ -14,7 +12,7 @@ If you already have knowledge and experience with DIY keyboards, you can skip ah
 
 Note: Most of the Monkeypad components are mounted on the back (underside) of the PCB. (However, soldering is not necessarily limited to the backside.)
 
-### 3-2.Installing-the-Diodes
+### 3-2.Installing the Diodes
 
 For ease of assembly, we have included SMD (Surface Mount Device) high-speed switching diodes (1N4148W).
 
