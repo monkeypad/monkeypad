@@ -1,4 +1,6 @@
-## 日本語のビルドガイドはこちら [Japanese](../Japanese/01_build_guide.md)
+**This page is the English build guide.**
+
+**日本語のビルドガイドはこちら** [Here is the build guide in Japanese](../Japanese/01_build_guide.md)
 
 ### Standard Specifications
 

@@ -9,22 +9,22 @@ It has 4 PCB boards and 2 modules, a main and sub board for each of the left and
 
 -   Keyboard Maintainer: [ozsan](https://github.com/monkeypad)
 -   Hardware Supported: Raspberry Pi Pico / Raspberry Pi Pico W
--   Hardware Availability: [Yushakobo](https://shop.yushakobo.jp/products/8411)
+-   Hardware Availability: [monkeypad](*Note: Hardware not yet available; stay tuned for updates*)
 
 ## Building the firmware
 
 **Important:** Ensure you specify the modules in `rules.mk` before compiling the firmware when swapping modules for different applications or uses.
 
 ```c
-MODULE_DEVICE_LEFT = {analog_joystick / pmw3389 / encoder / cirque_pinnacle_spi}
-MODULE_DEVICE_RIGHT = {analog_joystick / pmw3389 / encoder / cirque_pinnacle_spi}
+MODULE_DEVICE_LEFT = {analog_joystick / pmw3360 / encoder}
+MODULE_DEVICE_RIGHT = {analog_joystick / pmw3360 / encoder}
 ```
-QMK (version: 0.23.0) currently does not support multiple different pointing device sensor types. If using different pointing devices for left and right (analog_joystick / pmw3389 / cirque_pinnacle_spi), you need separate firmware for each side, requiring you to compile twice. When using encoders, the firmware remains the same for left and right.
+QMK (version: 0.23.0) currently does not support multiple different pointing device sensor types. If using different pointing devices for left and right (analog_joystick / pmw3360), you need separate firmware for each side, requiring you to compile twice. When using encoders, the firmware remains the same for left and right.
 
 Please select the TARGET_POINTING_DEVICE
 
 ```c
-TARGET_POINTING_DEVICE = {analog_joystick / pmw3389 / cirque_pinnacle_spi}
+TARGET_POINTING_DEVICE = {analog_joystick / pmw3360}
 ```
 The command is:
 
@@ -38,13 +38,13 @@ Check out the via layout if you're looking for VIA support.
 | -------------- | --------------------------------------------------------------- | ----------------------------------------------------------- |
 | Mk1            | `qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km default` | `qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km via` |
 
-### Trackball(pmw3389) / Trackpad(cirque_pinnacle_spi) Drag-scroll
+### Trackball Drag-scroll
 Enable scrolling with the trackball or analog-joystick using drag-scroll. When enabled, mouse_report `x` and `y` movements convert into `h` (horizontal) and `v` (vertical) movement.
 Connect the USB to either the left or right MCU to utilize the drag-scroll function.
 
-Call `monkeypad_set_trackball_mode(mode)` / `monkeypad_set_trackpad_mode(mode)` to enable/disable drag-scroll for the trackball.
+Call `monkeypad_set_trackball_mode(mode)` to enable/disable drag-scroll for the trackball.
 
-To invert the scrolling direction (i.e., mimic macOS "natural" scroll direction), define `TRACKBALL_SCROLL_REVERSE` / `TRACKBALL_SCROLL_REVERSE` in `config.h`
+To invert the scrolling direction (i.e., mimic macOS "natural" scroll direction), define `TRACKBALL_SCROLL_REVERSE` in `config.h`
 
 ```c
 #define TRACKBALL_SCROLL_REVERSE
@@ -62,8 +62,7 @@ The default settings allow for the following:
 | JOYSTICK_MOUSE_MODE | Functions as a mouse, mode controlling the mouse cursor. |
 | JOYSTICK_WHEEL_MODE | Sends Wheel Up (KC_WH_U), Down (KC_WH_D), Left (KC_WH_L), and Right (KC_WH_R) key codes of the wheel. |
 | JOYSTICK_ARROW_MODE | Sends Up (KC_UP), Down (KC_DOWN), Left (KC_LEFT), and Right (KC_RIGHT) key codes. |
-| JOYSTICK_GAME_MODE | Sends the W (KC_W), A (KC_A), S (KC_S), and D (KC_D) key codes used in games. |
-| JOYSTICK_CUSTOM_MODE | Sends the user defined keycodes in analog_joystick.c. |
+| JOYSTICK_GAMEPAD_MODE | Sends the W (KC_W), A (KC_A), S (KC_S), and D (KC_D) key codes used in games. |
 
 To invert the scrolling direction when using JOYSTICK_WHEEL_MODE, define `JOYSTICK_WHEEL_REVERSE` in `config.h`
 

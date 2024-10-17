@@ -34,14 +34,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SERIAL_USART_DRIVER SIOD0
 #define SERIAL_USART_TX_PIN GP0
 #define SERIAL_USART_RX_PIN GP1
-#define SERIAL_USART_TIMEOUT 20 // USART driver timeout. default 100
+#define SERIAL_USART_TX_PAL_MODE 7
+#define SERIAL_USART_RX_PAL_MODE 7
+#define SERIAL_USART_TIMEOUT 100 // USART driver timeout. default 100
 #define SELECT_SOFT_SERIAL_SPEED 1
-// #define SERIAL_DEBUG
+#define SERIAL_DEBUG
 
 /* Module Configuration */
 /* Analog Joystick */
 #if defined(USE_DEVICE_analog_joystick)
-#    define ANALOG_JOYSTICK_SPEED_REGULATOR 4 // Lower Values Create Faster Movement
+#    define POINTING_DEVICE_TASK_THROTTLE_MS 1
+#    define ANALOG_JOYSTICK_SPEED_REGULATOR 20 // Lower Values Create Faster Movement
 #    define ANALOG_JOYSTICK_AXIS_MIN 0
 #    define ANALOG_JOYSTICK_AXIS_MAX 1023
 #    undef JOYSTICK_BUTTON_COUNT
@@ -52,67 +55,55 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define JOYSTICK_AXIS_RESOLUTION 10
 #    define ANALOG_JOYSTICK_X_AXIS_PIN GP27
 #    define ANALOG_JOYSTICK_Y_AXIS_PIN GP26
-// #    define JOYSTICK_WHEEL_REVERSE
 #endif
 
-#if defined(USE_DEVICE_pmw3389) || defined(USE_DEVICE_cirque_pinnacle_spi)
-/* pointing device via spi (common pin assign) */
+/* Trackball */
+#if defined(USE_DEVICE_pmw3360)
 #    define SPI_DRIVER SPID1
 #    define SPI_SCK_PIN GP26
 #    define SPI_MISO_PIN GP8
 #    define SPI_MOSI_PIN GP27
-
-/* Trackball */
-#    if defined(USE_DEVICE_pmw3389)
-#        define POINTING_DEVICE_CS_PIN GP9
-#        define PMW33XX_CPI 500
-#        define PMW33XX_CS_DIVISOR 64
-// #     define TRACKBALL_SCROLL_REVERSE /* To invert the scrolling direction (_ie._ mimic macOS "natural" scroll direction) */
-#    endif
-
-/* Trackpad */
-#    if defined(USE_DEVICE_cirque_pinnacle_spi)
-#        define CIRQUE_PINNACLE_SPI_CS_PIN GP9
-// #     define CIRQUE_PINNACLE_TAP_ENABLE
-// #     define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
-#     define TRACKPAD_SCROLL_REVERSE
-// #     define TRACKPAD_CURSOR_REVERSE
-#    endif
+#    define POINTING_DEVICE_CS_PIN GP9
+#    define PMW33XX_CPI 500
+#    define PMW33XX_CS_DIVISOR 64
 #endif
 
-#if !defined(POINTING_DEVICE_TASK_THROTTLE_MS)
-#    define POINTING_DEVICE_TASK_THROTTLE_MS 10 // Cirque Pinnacle in normal operation produces data every 10ms.
+/* Pointing device direction */
+#if defined(POINTING_DEVICE_ENABLE)
+// #    define TRACKBALL_SCROLL_REVERSE /* To invert the scrolling direction (_ie._ mimic macOS "natural" scroll direction) */
+// #    define JOYSTICK_WHEEL_REVERSE
 #endif
- 
+
 /* Pointing device orientation */
 #if defined(SPLIT_POINTING_ENABLE)
 #    if defined(POINTING_DEVICE_COMBINED)
-#        define POINTING_DEVICE_ROTATION_180
+#        define POINTING_DEVICE_INVERT_Y
+#        define POINTING_DEVICE_INVERT_X_RIGHT
+#        define POINTING_DEVICE_ROTATION_90
+#        define POINTING_DEVICE_ROTATION_90_RIGHT
 #    elif defined(POINTING_DEVICE_LEFT)
-#        define POINTING_DEVICE_ROTATION_180
+#        define POINTING_DEVICE_INVERT_Y
+#        define POINTING_DEVICE_ROTATION_90
+#    elif defined(POINTING_DEVICE_RIGHT)
+#        define POINTING_DEVICE_INVERT_X
+#        define POINTING_DEVICE_ROTATION_90
 #    endif
 #endif
 
 /* Encoder */
 #if defined(ENCODER_ENABLE)
-// left encode
+// left encoder
 #    if defined MODULE_DEVICE_LEFT_encoder
 #        define ENCODERS_PAD_A { GP27 }
 #        define ENCODERS_PAD_B { GP26 }
-#       if defined MODULE_DEVICE_RIGHT_encoder
-#           define ENCODERS_PAD_A_RIGHT { GP26 }
-#           define ENCODERS_PAD_B_RIGHT { GP27 }
-#       endif
 // right encoder
-#    elif defined MODULE_DEVICE_RIGHT_encoder // only right encoder
-#           define ENCODERS_PAD_A       { GP26 }
-#           define ENCODERS_PAD_B       { GP27 }
+#    elif defined MODULE_DEVICE_RIGHT_encoder
+#        if defined(ENCODERS_PAD_A) || defined(ENCODERS_PAD_B) // it has left encoder
+#           define ENCODERS_PAD_A_RIGHT { GP27 }
+#           define ENCODERS_PAD_B_RIGHT { GP26 }
+#        else // right encoder
+#           define ENCODERS_PAD_A       { GP27 }
+#           define ENCODERS_PAD_B       { GP26 }
+#        endif
 #    endif
-#endif
-// dummy encoder pins configuration for REMAP
-#ifndef ENCODERS_PAD_A
-#define ENCODERS_PAD_A { GP2 }
-#endif
-#ifndef ENCODERS_PAD_B
-#define ENCODERS_PAD_B { GP3 }
 #endif

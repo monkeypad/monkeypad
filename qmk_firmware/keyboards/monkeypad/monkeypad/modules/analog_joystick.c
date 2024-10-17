@@ -23,12 +23,6 @@
 
 #if defined(USE_DEVICE_analog_joystick)
 
-// This key codes are supposed to be changed by the user.
-#define JOY_UP KC_1
-#define JOY_DOWN KC_2
-#define JOY_LEFT KC_3
-#define JOY_RIGHT KC_4
-
 // Set Parameters
 uint16_t minAxisValue   = ANALOG_JOYSTICK_AXIS_MIN;
 uint16_t maxAxisValue   = ANALOG_JOYSTICK_AXIS_MAX;
@@ -257,62 +251,6 @@ void axisToGamePadComponent(uint8_t pin, int16_t origin, bool xy) {
     }
 }
 
-void axisToCustomKeycodes(uint8_t pin, int16_t origin, bool xy) {
-    int16_t      coordinate = axisCoordinate(pin, origin);
-                 coordinate = ajustCoordinate(coordinate);
-    float        percent    = (float)coordinate / 100;
-    static float threshold  = 0.5;
-    static bool  arrows[4];
-    if (xy == 0) // x coordinate
-    {
-        if (percent > threshold) {
-            if (!arrows[0]) {
-                arrows[0] = true;
-                register_code16(JOY_RIGHT);
-            }
-        } else {
-            if (arrows[0]) {
-                arrows[0] = false;
-            }
-            unregister_code16(JOY_RIGHT);
-        }
-        if (percent < -threshold) {
-            if (!arrows[1]) {
-                arrows[1] = true;
-                register_code16(JOY_LEFT);
-            }
-        } else {
-            if (arrows[1]) {
-                arrows[1] = false;
-            }
-            unregister_code16(JOY_LEFT);
-        }
-    } else { // y coordinate
-        if (percent > threshold) {
-            if (!arrows[2]) {
-                arrows[2] = true;
-                register_code16(JOY_UP);
-            }
-        } else {
-            if (arrows[2]) {
-                arrows[2] = false;
-            }
-            unregister_code16(JOY_UP);
-        }
-        if (percent < -threshold) {
-            if (!arrows[3]) {
-                arrows[3] = true;
-                register_code16(JOY_DOWN);
-            }
-        } else {
-            if (arrows[3]) {
-                arrows[3] = false;
-            }
-            unregister_code16(JOY_DOWN);
-        }
-    }
-}
-
 report_analog_joystick_t analog_joystick_read(void) {
     static report_analog_joystick_t report = {0};
     switch (monkeypad_status.joystick_mode) {
@@ -339,18 +277,11 @@ report_analog_joystick_t analog_joystick_read(void) {
                 axisToArrowComponent(ANALOG_JOYSTICK_Y_AXIS_PIN, yOrigin, 1);
             }
             break;
-        case JOYSTICK_GAME_MODE: // gamepad
+        case JOYSTICK_GAMEPAD_MODE: // gamepad
             if (timer_elapsed(lastCursor) > ANALOG_JOYSTICK_READ_INTERVAL) {
                 lastCursor = timer_read();
                 axisToGamePadComponent(ANALOG_JOYSTICK_X_AXIS_PIN, xOrigin, 0);
                 axisToGamePadComponent(ANALOG_JOYSTICK_Y_AXIS_PIN, yOrigin, 1);
-            }
-            break;
-        case JOYSTICK_CUSTOM_MODE: // gamepad
-            if (timer_elapsed(lastCursor) > ANALOG_JOYSTICK_READ_INTERVAL) {
-                lastCursor = timer_read();
-                axisToCustomKeycodes(ANALOG_JOYSTICK_X_AXIS_PIN, xOrigin, 0);
-                axisToCustomKeycodes(ANALOG_JOYSTICK_Y_AXIS_PIN, yOrigin, 1);
             }
             break;
     }
@@ -372,7 +303,7 @@ void analog_joystick_init(void) {
 report_mouse_t analog_joystick_get_report(report_mouse_t mouse_report) {
     report_analog_joystick_t data = analog_joystick_read();
 
-    mouse_report.x = - data.x;
+    mouse_report.x = data.x;
     mouse_report.y = data.y;
 
     mouse_report.buttons = pointing_device_handle_buttons(mouse_report.buttons, data.button, POINTING_DEVICE_BUTTON1);

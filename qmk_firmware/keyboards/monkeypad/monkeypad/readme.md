@@ -1,6 +1,7 @@
 # Monkeypad QMK Firmware
 
-![Monkeypad](https://github.com/monkeypad/monkeypad/blob/main/build_guide/standard/images/01/monkeypad_1_00.jpeg)
+![Monkeypad](link_to_monkeypad_image)
+Need to be updated
 
 ## Introduction
 
@@ -8,7 +9,7 @@ Monkeypad is a customizable mechanical keyboard designed for enthusiasts seeking
 
 ## Features
 
-- Interchangeable modules for trackball, joystick, encoder and trackpad
+- Interchangeable modules for trackball, joystick, and encoder
 - User-adjustable tenting structure
 - Stylish aluminum plate for a split keyboard design
 - Expansion ports for additional functionalities
@@ -45,10 +46,12 @@ Monkeypad's QMK firmware can be configured to meet your specific needs. Refer to
 
 2. Compile the firmware
 
+| Version | default                                                         | via                                                         |
+| -------------- | --------------------------------------------------------------- | ----------------------------------------------------------- |
+| Mk1            | `qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km default` | `qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km via` |
+
 ```bash
-qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km default
-or
-qmk compile -kb monkeypad/monkeypad/4x6/mk1 -km via
+qmk compile -kb monkeypad/monkeypad/mk1 -km default
 ```
 The firmware file follows this naming format:
 monkeypad_monkeypad_<model_name>_<keymap_name>.{bin,uf2}
@@ -89,14 +92,13 @@ Opening soon (*Note: Hardware not yet available; stay tuned for updates*)
 * Available
     * Monkeypad
 * Modules
-    * Trackball (PMW3389)
+    * Trackball (PMW3360)
     * Analog joystick
     * Encoder
-    * Trackpad (Cirque Pinnacle)
     * ... under development
 
 ## Customizing the Firmware
 
 Monkeypad offers a range of customizable features to tailor your keyboard experience. Explore the following options to personalize your keyboard to suit your preferences.
 
-See the readme.md for further information of [source code](4x6/readme.md). 
+See the readme.md for further information of [source code](./qmk_firmware/keyboards/monkeypad/4x6/readme.md). 

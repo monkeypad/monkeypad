@@ -8,7 +8,7 @@ else
 	ifeq ($(or $(findstring encoder,$(MODULE_DEVICE_LEFT)), $(findstring encoder,$(MODULE_DEVICE_RIGHT))),encoder)
 		ENCODER_ENABLE = yes
 	else
-# 		ENCODER_ENABLE = no
+		ENCODER_ENABLE = no
 	endif
 	OPT_DEFS += -DMODULE_DEVICE_LEFT_$(strip $(MODULE_DEVICE_LEFT))
 	OPT_DEFS += -DMODULE_DEVICE_RIGHT_$(strip $(MODULE_DEVICE_RIGHT))
@@ -31,10 +31,3 @@ else
 	endif
 endif
 
-# If MIDI_ENABLE is 'yes', set the following parameters to 'no'
-ifeq ($(strip $(MIDI_ENABLE)), yes)
-CONSOLE_ENABLE = no
-NKRO_ENABLE = no
-EXTRAKEY_ENABLE = no
-MOUSEKEY_ENABLE = no
-endif
