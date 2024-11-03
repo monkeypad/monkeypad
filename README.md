@@ -6,7 +6,9 @@ Monkeypad is a customizable mechanical keyboard designed for enthusiasts seeking
 
 ## Where to Buy
 
-TBD
+[Yushakobo](https://shop.yushakobo.jp/products/8411)
+[Booth](https://monkeypad.booth.pm/)
+
 
 ## Build Guide
 
@@ -32,16 +34,21 @@ For the following combinations, flash the same firmware for both sides.
 |1|Trackball|Trackball|[1_mp_mk1_trackball_via.uf2](./firmware/1_mp_mk1_trackball_via.uf2)|
 |2|Analog Joystick|Analog Joystick|[2_mp_mk1_joystick_via.uf2](./firmware/2_mp_mk1_joystick_via.uf2)|
 |3|Encoder|Encoder|[3_mp_mk1_encoder_via.uf2](./firmware/3_mp_mk1_encoder_via.uf2)|
-|4|Encoder|Trackball|[4_mp_mk1_left_encoder_right_trackball_via.uf2](./firmware/4_mp_mk1_left_encoder_right_trackball_via.uf2)|
-|5|Encoder|Analog Joystick|[5_mp_mk1_left_encoder_right_joystick_via.uf2](./firmware/5_mp_mk1_left_encoder_right_joystick_via.uf2)|
-|6|Trackball|Encoder|[6_mp_mk1_left_trackball_right_encoder_via.uf2](./firmware/6_mp_mk1_left_trackball_right_encoder_via.uf2)|
-|7|Analog Joystick|Encoder|[7_mp_mk1_left_joystick_right_encoder_via.uf2](./firmware/7_mp_mk1_left_joystick_right_encoder_via.uf2)|
+|4|Trackpad|Trackpad|[4_mp_mk1_trackpad_via.uf2](./firmware/4_mp_mk1_trackpad_via.uf2)|
+|5|Encoder|Trackball|[5_mp_mk1_left_encoder_right_trackball_via.uf2](./firmware/5_mp_mk1_left_encoder_right_trackball_via.uf2)|
+|6|Encoder|Joystick|[6_mp_mk1_left_encoder_right_joystick_via.uf2](./firmware/6_mp_mk1_left_encoder_right_joystick_via.uf2)|
+|7|Encoder|Trackpad|[7_mp_mk1_left_encoder_right_trackpad_via.uf2](./firmware/7_mp_mk1_left_encoder_right_trackpad_via.uf2)|
+|8|Trackball|Encoder|[8_mp_mk1_left_trackball_right_encoder_via.uf2](./firmware/8_mp_mk1_left_trackball_right_encoder_via.uf2)|
+|9|Analog Joystick|Encoder|[9_mp_mk1_left_joystick_right_encoder_via.uf2](./firmware/9_mp_mk1_left_joystick_right_encoder_via.uf2)|
+|10|Trackpad|Encoder|[10_mp_mk1_left_trackpad_right_encoder_via.uf2](./firmware/10_mp_mk1_left_trackpad_right_encoder_via.uf2)|
 
 For the following combinations, flash different firmware for each of the left and right sides.
 
 |No.|LEFT|RIGHT|left *.uf2|right *.uf2|
 |:----|:----|:----|:----|:----|
-|8|Analog Joystick|Trackball|[8_mp_mk1_left_joystick_right_trackball_LEFT_via.uf2](./firmware/8_mp_mk1_left_joystick_right_trackball_LEFT_via.uf2)|[8_mp_mk1_left_joystick_right_trackball_RIGHT_via.uf2](./firmware/8_mp_mk1_left_joystick_right_trackball_RIGHT_via.uf2)|
-|9|Trackball|Analog Joystick|[9_mp_mk1_left_trackball_right_joystick_LEFT_via.uf2](./firmware/9_mp_mk1_left_trackball_right_joystick_LEFT_via.uf2)|[9_mp_mk1_left_trackball_right_joystick_RIGHT_via.uf2](./firmware/9_mp_mk1_left_trackball_right_joystick_RIGHT_via.uf2)|
-
-(TO BE DOCUMENTED)
+|11|Analog Joystick|Trackball|[11_mp_mk1_left_joystick_right_trackball_LEFT_via.uf2](./firmware/11_mp_mk1_left_joystick_right_trackball_LEFT_via.uf2)|[11_mp_mk1_left_joystick_right_trackball_RIGHT_via.uf2](./firmware/11_mp_mk1_left_joystick_right_trackball_RIGHT_via.uf2)|
+|12|Analog Joystick|Trackpad|[12_mp_mk1_left_joystick_right_trackpad_LEFT_via.uf2](./firmware/12_mp_mk1_left_joystick_right_trackpad_LEFT_via.uf2)|[12_mp_mk1_left_joystick_right_trackpad_RIGHT_via.uf2](./firmware/12_mp_mk1_left_joystick_right_trackpad_RIGHT_via.uf2)|
+|13|Trackball|Analog Joystick|[13_mp_mk1_left_trackball_right_joystick_LEFT_via.uf2](./firmware/13_mp_mk1_left_trackball_right_joystick_LEFT_via.uf2)|[13_mp_mk1_left_trackball_right_joystick_RIGHT_via.uf2](./firmware/13_mp_mk1_left_trackball_right_joystick_RIGHT_via.uf2)|
+|14|Trackpad|Analog Joystick|[14_mp_mk1_left_trackpad_right_joystick_LEFT_via.uf2](./firmware/14_mp_mk1_left_trackpad_right_joystick_LEFT_via.uf2)|[14_mp_mk1_left_trackpad_right_joystick_RIGHT_via.uf2](./firmware/14_mp_mk1_left_trackpad_right_joystick_RIGHT_via.uf2)|
+|15|Trackpad|Trackball|[15_mp_mk1_left_trackpad_right_trackball_LEFT_via.uf2](./firmware/15_mp_mk1_left_trackpad_right_trackball_LEFT_via.uf2)|[15_mp_mk1_left_trackpad_right_trackball_RIGHT_via.uf2](./firmware/15_mp_mk1_left_trackpad_right_trackball_RIGHT_via.uf2)|
+|16|Trackpad|Trackball|[16_mp_mk1_left_trackball_right_trackpad_LEFT_via.uf2.uf2](./firmware/16_mp_mk1_left_trackball_right_trackpad_LEFT_via.uf2)|[16_mp_mk1_left_trackball_right_trackpad_RIGHT_via.uf2](./firmware/16_mp_mk1_left_trackball_right_trackpad_RIGHT_via.uf2)|

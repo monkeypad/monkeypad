@@ -95,6 +95,7 @@ Opening soon (*Note: Hardware not yet available; stay tuned for updates*)
     * Trackball (PMW3360)
     * Analog joystick
     * Encoder
+    * Cirque Trackpad
     * ... under development
 
 ## Customizing the Firmware
